@@ -1,0 +1,12 @@
+plugin-audio-keyboard-response.js
+plugin-canvas-keyboard-response.js
+plugin-free-sort.js
+plugin-fullscreen.js
+plugin-html-button-response.js
+plugin-html-keyboard-response.js
+plugin-instructions.js
+plugin-preload.js
+plugin-survey-html-form.js
+plugin-survey-likert.js
+plugin-survey-multi-choice.js
+plugin-survey-text.js

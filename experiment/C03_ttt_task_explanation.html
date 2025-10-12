@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="./jspsych.js"></script>
+    <script src="./plugins/plugin-preload.js"></script>
+    <script src="./plugins/plugin-survey-html-form.js"></script>
+    <script src="./plugins/plugin-audio-keyboard-response.js"></script>
+    <script src="./plugins/plugin-html-keyboard-response.js"></script>
+    <script src="./plugins/plugin-html-button-response.js"></script>
+    <script src="./plugins/plugin-survey-text.js"></script>
+    <script src="./plugins/plugin-fullscreen.js"></script>
+    <script src="./plugins/plugin-survey-likert.js"></script>
+    <script src="./plugins/plugin-survey-multi-choice.js"></script>
+    <script src="./plugins/plugin-instructions.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="./css/jspsych.css" />
+  </head>
+  <body></body>
+  <script>
+/*
+　C03_ttt_task_explanation.html
+　- 認知科学の資料論文に公開する思考プローブの学習課題
+*/
+
+let isTaskMain = false;//taskの量をデバッグと本番の切り替え
+
+  //Tabキーの無効化(keyCodeは9)
+  $(document).on('keydown', function(e){
+    if ((e.which || e.keyCode) == 9) {
+      return false;
+    }
+  });
+
+  // 課題の初期化
+  jsPsych = initJsPsych({
+    on_finish: () => {
+      //DBにデータを送りたい場合はこの部分にsaveDatatoMysql()のような関数を自作して入れる
+      //今回は実験終了後に、ダウンロードにcsv出力する
+      jsPsych.data.get().localSave("csv", "./C03_ttt_task_explanation.csv");
+    },
+  });
+
+  //実験開始時間の記録
+  const ex_start_time = new Date();
+  const ex_start_time_text = ex_start_time.getFullYear()+"/"+(ex_start_time.getMonth()+1)+"/"+ex_start_time.getDate()+ " "+ ex_start_time.getHours()+":"+("0" + ex_start_time.getMinutes()).slice(-2)+":"+("0" + ex_start_time.getSeconds()).slice(-2);
+  jsPsych.data.addProperties({"StartTime":ex_start_time_text});//参加者情報に格納
+
+  //実験画面を全画面表示にする
+  //フルスクリーンで実験を始める
+  const FullScreen = {
+      type: jsPsychFullscreen,
+      fullscreen_mode: true,
+      message:"これから実験を始めます。実験はフルスクリーンで行われます。<br>"+
+      "（フルスクリーン非対応ブラウザの場合を除く）<br>"+
+      "*なお、実験を途中でやめる場合は、Escキーを押すことでフルスクリーンを解除することができます。<br><br>"+
+      "「次へ」ボタンを押すと次に進みます。<br><br>",
+      button_label:"次へ",
+      delay_after:1000,
+      data: { task: 'FullScreen' },
+  };
+
+  //選択肢の初期化
+  const classification_choices = ['プランニング', '出力', '修正', 'その他'];
+  //loop_function用のフラグの初期化
+  let last_trial_correct = 0;
+
+  const category_pages = [
+    `
+      <p style="text-align: left">※これ以降の課題ではヘッドホンあるいは音が聞きやすいデバイスを装着して取り組んでください。</p>
+      <p style="text-align: left">※普段、パソコンを使って文字を入力する時のように、手をキーボードにおいて課題に取り組んでください。</p>
+      <p><br></p>
+      <p style="text-align: left">本研究における、あなたの現在の課題を太字で示しています。</p>
+      <ul style="text-align: left;">
+        <li style='color:gray'>あなた自身についての質問 (所要時間：5分程度)</li>
+        <li style='color:gray'>刺激に対する反応の速さの課題（所要時間: 5分程度）</li>
+        <li><b>文章産出中の思考に関する課題（所要時間: 5分程度）</b></li>
+        <li>事前課題（所要時間: 10分程度）</li>
+        <li>文章産出課題（所要時間: 20分程度）</li>
+      </ul>
+    `,
+    `
+      <p style="text-align: left">ここでは、あなたが文章や物語を書いている時に、どのようなことを考えているかに関する事項を学習していただきます。</p>
+      <p style="text-align: left">ここでは、物語を書いている最中の4種類の思考内容について質問をします。</p>
+      <p style="text-align: left">次のページから、それぞれについて説明します</p>
+    `,
+    `
+      <h2>4種類の思考内容</h2>
+      <p style="text-align: left"><strong>プランニング：</strong>課題の目標を定め、それに沿ったアイデアを生成・整理すること。</p>
+      <p style="text-align: left"><strong>出力：</strong>アイデアを言語形式に変換し、それをタイピングでテキストとして出力すること。</p>
+      <p style="text-align: left"><strong>修正：</strong>意図されたテキストおよび実際に書かれたテキストを監視・評価し、修正すること。</p>
+      <p style="text-align: left"><strong>その他：</strong>上記のいずれにもあてはまらない思考。</p>
+    `,
+    `
+      <p style="text-align: left">次のページから、先ほど呈示した4種類の思考内容のそれぞれについて、あなたが正しく理解しているかのテストをします。</p>
+      <p style="text-align: left">画面中央に文章や物語を書いている時の思考に関する文が呈示されるので、</p>
+      <p style="text-align: left">それが<b>「プランニング」「出力」「修正」そして「その他」のどれに当てはまるかを、画面に提示されたボタンを押して回答してください。</b></p>
+      <p><br><br></p>
+      <p style="text-align: left">それぞれのボタンを押すとすぐに、正解あるいは不正解のフィードバックが呈示されます。</p>
+      <p style="text-align: left">不正解の場合は、もう一度同じ文が提示されるので、あらためて問題に取り組んでください。</p>
+      <p><br><br></p>
+      <p style="text-align: left">準備ができたら、「次へ」ボタンを押して、テストに進んでください。</p>
+    `
+  ];
+
+  //1. 教示文を呈示
+  const category_inst_tl = {
+    type: jsPsychInstructions,
+    pages: category_pages,
+    show_clickable_nav: true,
+    button_label_previous: "前へ",
+    button_label_next: "次へ",
+    data: { task: 'category_inst_tl' },
+  };
+
+  //2. 文分類課題（28文）
+  let current_sentences;
+  if (isTaskMain){//本番
+    current_sentences = [
+        // プランニング（7）
+        { text: "話の構成を考えている。", correct: "プランニング" },
+        { text: "どんな登場人物がいいか悩んでいる。", correct: "プランニング" },
+        { text: "物語の終わり方を考えている。", correct: "プランニング" },
+        { text: "テーマに合った話を作ろうとしている。", correct: "プランニング" },
+        { text: "時系列を整理している。", correct: "プランニング" },
+        { text: "この話の舞台をどうするか決めている。", correct: "プランニング" },
+        { text: "全体の流れを思い描いている。", correct: "プランニング" },
+
+        // // 出力（7）
+        { text: "キーボードで文章を入力している。", correct: "出力" },
+        { text: "思いついた文をそのまま書いている。", correct: "出力" },
+        { text: "「ある日」という言葉を打ち込んでいる。", correct: "出力" },
+        { text: "キャラクターの名前を入力している。", correct: "出力" },
+        { text: "文章をどんどんタイピングしている。", correct: "出力" },
+        { text: "頭の中の話を形にしている。", correct: "出力" },
+        { text: "思いついた言葉をすぐに書いている。", correct: "出力" },
+
+        // // 修正（7）
+        { text: "文章が変だったので書き直した。", correct: "修正" },
+        { text: "表現をより自然に直している。", correct: "修正" },
+        { text: "誤字を修正した。", correct: "修正" },
+        { text: "話のつながりがおかしいので直した。", correct: "修正" },
+        { text: "誤字脱字を確認するために、本文を読み直している。", correct: "修正" },
+        { text: "内容を読み返して見直している。", correct: "修正" },
+        { text: "読みにくい部分を調整している。", correct: "修正" },
+
+        // その他 (7)
+        { text: "ストレッチをして体をほぐした。", correct: "その他" },
+        { text: "何も思いつかずに机の上を眺めていた。", correct: "その他" },
+        { text: "タイマーの残り時間を確認した。", correct: "その他" },
+        { text: "目を閉じてぼーっとしていた。", correct: "その他" },
+        { text: "何となく窓の外を見ていた。", correct: "その他" },
+        { text: "書くことをやめて指を回していた。", correct: "その他" },
+        { text: "自分の書いた文字を眺めていたが、何も考えていなかった。", correct: "その他" },
+      ];
+  } else {//デバッグ用
+      current_sentences = [
+        // 各一つ
+        { text: "話の構成を考えている。", correct: "プランニング" },
+        { text: "キーボードで文章を入力している。", correct: "出力" },
+        { text: "読みにくい部分を調整している。", correct: "修正" },
+        { text: "ストレッチをして体をほぐした。", correct: "その他" },
+      ];
+  }
+
+  // 3. 分類課題（フィードバック付き）
+  const classify_sentence_trial = (sentenceObj) => {
+    const cs_timeline = {
+      timeline: [
+        //分類課題
+        {
+          type: jsPsychHtmlButtonResponse,
+          stimulus: `<p>${sentenceObj.text}</p>`,
+          choices: classification_choices,
+          data: {
+            correct_answer: sentenceObj.correct,
+            sentence_text: sentenceObj.text,
+            task: 'classification_trial',
+          },
+          //フィードバックのための情報をdataに保存する
+          on_finish: function(data) {
+            const response = classification_choices[data.response];
+            const isCorrect = response === data.correct_answer;
+            data.correct = isCorrect;
+          },
+        },
+        //分類課題に対するフィードバック
+        {
+          type: jsPsychHtmlKeyboardResponse,
+          stimulus: function(){
+            last_trial_correct = jsPsych.data.get().last(1).values()[0].correct;
+            return last_trial_correct ? "<p style='color:green;'>正解！</p>" : "<p style='color:red;'>不正解！もう一度回答してください。</p>";
+          },
+          choices: "NO_KEYS",
+          trial_duration: 500, // 白画面を500ms表示,
+          data: {
+            task: 'feedback_trial',
+          },
+        }
+      ],
+      //直前のtrialの成績が0だったらもう一回やり直し。
+      loop_function: function(){
+        return last_trial_correct == 0;
+      },
+    };
+    return cs_timeline;
+  };
+
+  // settingsをmapして刺激を読み込む（刺激のランダム化もする）
+  // timelineというキーでoverrideしてあげるといい感じに動く
+  const classify_sentence_tl = {timeline: jsPsych.randomization.repeat(current_sentences.map((s) => classify_sentence_trial(s)), 1)};
+
+  //4. 本課題の説明
+  const task_description = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: `
+      <p style="text-align: left">本課題では、<strong>あなたが考えたオリジナルの面白い物語を書いていただきます。</strong></p>
+      <p style="text-align: left">その時に、いま覚えてもらった4種類の思考内容についてもお尋ねします。</p>
+      <p><br><br></p>
+      <p style="text-align: left">次に、本課題の前に行ってもらう課題の説明に移ります。準備ができたらスペースキーを押してください。</p>
+    `,
+    choices: [' '],
+    data: { task: 'task_description' },
+
+    on_finish:function(data){
+      const ex_finish_time = new Date();
+      const ex_finish_time_text = ex_finish_time.getFullYear()+"/"+(ex_finish_time.getMonth()+1)+"/"+ex_finish_time.getDate()+ " "+ ex_finish_time.getHours()+":"+("0" + ex_finish_time.getMinutes()).slice(-2)+":"+("0" + ex_finish_time.getSeconds()).slice(-2);
+      jsPsych.data.addProperties({"EndTime":ex_finish_time_text});
+    }
+  };
+
+  jsPsych.run([
+    FullScreen,
+    category_inst_tl,
+    classify_sentence_tl,
+    task_description,
+  ])
+
+  </script>
+</html>

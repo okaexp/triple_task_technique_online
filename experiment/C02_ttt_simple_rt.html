@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="./jspsych.js"></script>
+    <script src="./plugins/plugin-preload.js"></script>
+    <script src="./plugins/plugin-survey-html-form.js"></script>
+    <script src="./plugins/plugin-audio-keyboard-response.js"></script>
+    <script src="./plugins/plugin-html-keyboard-response.js"></script>
+    <script src="./plugins/plugin-html-button-response.js"></script>
+    <script src="./plugins/plugin-survey-text.js"></script>
+    <script src="./plugins/plugin-fullscreen.js"></script>
+    <script src="./plugins/plugin-instructions.js"></script>
+    <script src="./plugins/plugin-survey-likert.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="./css/jspsych.css" />
+  </head>
+  <body></body>
+  <script>
+/*
+　C02_ttt_simple_rt.html
+　- 認知科学の資料論文に公開する単純反応時間課題
+*/
+
+let isTaskMain = false;//taskの量をデバッグと本番の切り替え
+
+if (isTaskMain){//本番
+  num_repetetions = 30;
+} else {//デバッグ用
+  num_repetetions = 2;
+}
+
+  //Tabキーの無効化(keyCodeは9)
+  $(document).on('keydown', function(e){
+    if ((e.which || e.keyCode) == 9) {
+      return false;
+    }
+  });
+
+  // 課題の初期化
+  jsPsych = initJsPsych({
+    on_finish: () => {
+      //DBにデータを送りたい場合はこの部分にsaveDatatoMysql()のような関数を自作して入れる
+      //今回は実験終了後に、ダウンロードにcsv出力する
+      jsPsych.data.get().localSave("csv", "./C02_ttt_simple_rt.csv");
+    },
+  });
+
+  //音声ファイルを事前に読み込んでおく
+  const preload = {
+    type: jsPsychPreload,
+    audio: ['./stimulus/beep.mp3']
+  };
+
+  //実験開始時間の記録
+  const ex_start_time = new Date();
+  const ex_start_time_text = ex_start_time.getFullYear()+"/"+(ex_start_time.getMonth()+1)+"/"+ex_start_time.getDate()+ " "+ ex_start_time.getHours()+":"+("0" + ex_start_time.getMinutes()).slice(-2)+":"+("0" + ex_start_time.getSeconds()).slice(-2);
+  jsPsych.data.addProperties({"StartTime":ex_start_time_text});//参加者情報に格納
+
+  //実験画面を全画面表示にする
+  //フルスクリーンで実験を始める
+  const FullScreen = {
+      type: jsPsychFullscreen,
+      fullscreen_mode: true,
+      message:"これから実験を始めます。実験はフルスクリーンで行われます。<br>"+
+      "（フルスクリーン非対応ブラウザの場合を除く）<br>"+
+      "*なお、実験を途中でやめる場合は、Escキーを押すことでフルスクリーンを解除することができます。<br><br>"+
+      "「次へ」ボタンを押すと次に進みます。<br><br>",
+      button_label:"次へ",
+      delay_after:1000,
+      data: { task: 'FullScreen' },
+  };
+
+  const check_volume = {
+    type: jsPsychHtmlButtonResponse,
+    stimulus:`
+        <p style="text-align: left">はじめに、この後の実験で使う音声の音量を調整してください。</p>
+        <p style="text-align: left">以下に提示されている「音を流す」ボタンを押すと音（短いビープ音）が流れますので、</p>
+        <p style="text-align: left">適切な音量となるようにPCやイヤホンの設定をお願いします。</p>
+        <p><button id="play-sound-button">音を流す</button></p>
+        <p style="text-align: left"><b>この音は以降も使うので、ここで設定した内容は、この研究のすべての実験が終わるまで変更しないでください。</b></p>
+        <p><br></p>
+    `,
+    choices: ['次へ'],
+    button_html: '<button class="jspsych-btn">%choice%</button>',
+    data: { task: 'check_volume' },
+
+    on_load: () => {
+      // ボタン押したら音を鳴らすイベントを登録
+      const btn = document.getElementById('play-sound-button');
+      if (btn) {
+        btn.addEventListener('click', function () {
+          const audio = new Audio('./stimulus/beep.mp3');
+          audio.play();
+        });
+      }
+    }
+  };
+
+  overall_inst = [
+  `
+    <p style="text-align: left">※これ以降の課題ではヘッドホンあるいは音が聞きやすいデバイスを装着して取り組んでください。</p>
+    <p style="text-align: left">※普段、パソコンを使って文字を入力する時のように、手をキーボードにおいて課題に取り組んでください。</p>
+    <p><br></p>
+    <p style="text-align: left">本研究における、あなたの現在の課題を太字で示しています。</strong></p>
+    <ul style="text-align: left;">
+      <li style='color:gray'>あなた自身についての質問 (所要時間：5分程度)</li>
+      <li><b>刺激に対する反応の速さの課題（所要時間: 5分程度）</b></li>
+      <li>文章産出中の思考に関する課題（所要時間: 5分程度）</li>
+      <li>事前課題（所要時間: 10分程度）</li>
+      <li>文章産出課題（所要時間: 20分程度）</li>
+    </ul>
+  `,
+  `
+    <p style="text-align: left">この課題では、「準備ができたらスペースキーを押してください。課題が始まります。」と表示されます。</p>
+    <p style="text-align: left">スペースキーを押すと、画面中央に注視点が表示されます。</p>
+    <p style="text-align: left"><strong>その後、どこかのタイミングでビープ音が呈示されるので、</strong></p>
+    <p style="text-align: left"><strong>呈示され次第すぐにtabキー（windowsならTABと書かれたキー; macなら「→|」が書かれたキー）を押してください。</strong></p>
+    <p style="text-align: left">注視点が消えると、「準備ができたらスペースキーを押してください。課題が始まります。」という画面が呈示されるので、再び課題に戻ってください。</p>
+    <p><br><br></p>
+    <p style="text-align: left"><strong>「次へ」ボタンを押すと練習が始まります。</strong></p>
+  `
+]
+
+const overall_inst_tl = {
+  type: jsPsychInstructions,
+  pages: overall_inst,
+  show_clickable_nav: true,
+  button_label_previous: "前へ",
+  button_label_next: "次へ",
+  data: { task: 'main_task_inst_tl' },
+};
+
+  // 共通の開始画面
+  const start_screen = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: `<p>準備ができたらスペースキーを押してください。課題が始まります。</p>`,
+    choices: [' '],
+    data: { task: 'start_screen' },
+  };
+
+  // 注視点
+  const fixation = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: '<p style="font-size:48px;">+</p>',
+    choices: "NO_KEYS",
+    trial_duration: 1000,
+    data: { task: 'fixation' },
+  };
+
+  //白画面を表示
+  const white_screen = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: '',
+    choices: "NO_KEYS",
+    trial_duration: 500, // 白画面を500ms表示,
+    data: { task: 'white_screen' },
+  };
+
+  // ビープ音と反応収集
+  const create_rt_trial = (rt_pra_or_main) => {
+    return {
+      type: jsPsychHtmlKeyboardResponse,
+      stimulus: () => '<div id="fixation" style="font-size: 48px;">+</div>',
+      choices: ['Tab'],
+      trial_duration: null, // 無限に待つ
+      data: { task: 'rt_trial' },
+
+      //trail_delayを1秒から3秒ランダムに入れる
+      on_start: function(trial) {
+        trial.delay = Math.floor(Math.random() * (3000 - 1000 + 1)) + 1000; // 1000-3000ms
+      },
+
+      on_load: function() {
+        // 音を指定遅延後に再生
+        setTimeout(() => {
+          const audio = new Audio('./stimulus/beep.mp3');
+          audio.play();
+        }, jsPsych.getCurrentTrial().delay);
+      },
+
+      //反応時間と遅延時間を記録
+      on_finish: function(data) {
+        data.trial_type_custom = 'rt_trial';
+        data.rt_pra_or_main = rt_pra_or_main;
+        data.delay = jsPsych.getCurrentTrial().delay;
+      }
+    };
+  }
+
+  // 練習用試行（3回）
+  const rt_task_practice = {
+    timeline: [start_screen, fixation, create_rt_trial("practice"), white_screen],
+    repetitions: 3,
+  };
+ 
+  // 中間教示
+  const intermediate_instruction = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: `<p style="text-align: left">練習は以上です。</p>
+               <p style="text-align: left">この後、本番課題に入ります。</p>
+               <p style="text-align: left">ビープ音の音量が気になる方は、パソコンの音量設定をここで変更ください。</p>
+               <p style="text-align: left"><strong>本番も、ビープ音が聞こえ次第すぐにTabキーを押してください。</strong></p>
+               <p><br><br></p>
+               <p><strong>準備ができたらスペースキーを押してください。</strong></p>`,
+    choices: [' ']
+  };
+
+  // 本番試行（30回）
+  const rt_task_main = {
+    timeline: [start_screen, fixation, create_rt_trial("main"), white_screen],
+    repetitions: num_repetetions,
+  };
+
+  // デブリーフィング
+  const debrief = {
+    type: jsPsychHtmlKeyboardResponse,
+    stimulus: function() {
+      return `<p style="text-align: left">おつかれさまでした。</p>
+        <p><br><br></p>
+        <p style="text-align: left">次に、本課題の際に行ってもらう課題の説明に移ります。</p>
+        <p style="text-align: left"><strong>準備ができたらスペースキーを押してください。</strong></p>`;
+    },
+    choices: " ",
+    data: { task: 'task_description' },
+
+    on_finish:function(data){
+      const ex_finish_time = new Date();
+      const ex_finish_time_text = ex_finish_time.getFullYear()+"/"+(ex_finish_time.getMonth()+1)+"/"+ex_finish_time.getDate()+ " "+ ex_finish_time.getHours()+":"+("0" + ex_finish_time.getMinutes()).slice(-2)+":"+("0" + ex_finish_time.getSeconds()).slice(-2);
+      jsPsych.data.addProperties({"EndTime":ex_finish_time_text});
+    }
+  };
+
+  jsPsych.run([
+    preload,
+    FullScreen,
+    check_volume,
+    overall_inst_tl,
+    rt_task_practice,
+    intermediate_instruction,
+    rt_task_main,
+    debrief
+  ]);
+
+  </script>
+</html>

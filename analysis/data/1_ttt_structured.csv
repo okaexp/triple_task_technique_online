@@ -1,0 +1,505 @@
+success,trial_type,trial_index,time_elapsed,internal_node_id,ID,condition,StartTime,EndTime,task,view_history,rt,response,ref_text,intro_text,challenge_text,resolve_text,writing_txt,writing_duration_rt,pre_writing_pause,stimulus
+1,preload,0,16,0.0-0.0,5127776,structured,2025/8/8 11:31,2025/8/8 11:51,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,2742,0.0-1.0,5127776,structured,2025/8/8 11:31,2025/8/8 11:51,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,113861,0.0-2.0,5127776,structured,2025/8/8 11:31,2025/8/8 11:51,structure_outline_inst_tl,Array,111118,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,593863,0.0-3.0,5127776,structured,2025/8/8 11:31,2025/8/8 11:51,structure_outline_task,NULL,NULL,Array,なし,静かな港町に住む青年カイは、祖父から受け継いだ古い羅針盤を手にしていた,羅針盤が指す方角は、ものすごい嵐が起きる海域で、船に乗る者は全員行方不明になると恐れられていた,カイは特殊能力を持つ仲間を信じ、協力して困難をはねのけて、嵐の先にたどり着き、とてつもない財宝を手に入れた,NULL,NULL,NULL,NULL
+NULL,instructions,4,643623,0.0-4.0,5127776,structured,2025/8/8 11:31,2025/8/8 11:51,main_task_inst_tl,Array,49759,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,1202638,0.0-5.0,5127776,structured,2025/8/8 11:31,2025/8/8 11:51,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"港町に暮らす青年カイは、祖父から受け継いだ古い羅針盤を持っていた。この羅針盤は、選ばれしものに試練と褒美を与えてくれるという言い伝えがあった。針はある日、みんなから恐れられる「黒嵐の海」をまっすぐ示すしていた。
+
+　カイは炎を操るエリン、海中を泳ぐトウマ、風を読むミラと出航した。嵐の中、氷塊や巨大な渦が行く手を阻むが、仲間の力を合わせ突破した。
+
+　嵐の先には黄金の島と財宝が眠っており、カイたちは無事に全ての財宝を持ち帰って財政難だった港町を救う。夜には宴がひらかれて皆喜んだ。ふと、カイが羅針盤に目をやると、羅針盤は再び別の方角を指し、次の冒険を告げていた。
+
+",559015,192240,NULL
+NULL,html-keyboard-response,6,1204917,0.0-6.0,5127776,structured,2025/8/8 11:31,2025/8/8 11:51,debrief,NULL,2278, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,5,0.0-0.0,201371,structured,2025/8/8 11:32,2025/8/8 11:51,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,8288,0.0-1.0,201371,structured,2025/8/8 11:32,2025/8/8 11:51,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,122267,0.0-2.0,201371,structured,2025/8/8 11:32,2025/8/8 11:51,structure_outline_inst_tl,Array,113978,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,602269,0.0-3.0,201371,structured,2025/8/8 11:32,2025/8/8 11:51,structure_outline_task,NULL,NULL,Array,なし,"山間の小さな集落に、生まれつき右の翼が少しだけ短いカラス、が住んでいた
+他のカラスたちのように速く、高く飛ぶことができず、いつも群れの後ろを飛んでいた","大移動の日、右の翼が少しだけ短いカラスは必死に皆についていこうとするが、他のカラスたちよりも体力を消耗してしまう
+翼の怪我も悪化し、彼はたどり着いた見知らぬ森で動けなくなってしまう","速く飛ぶことはできなくても、森の動物たちが知らなかった食料の場所を持ち前の観察力で探し出す
+傷ついた翼でも安全に移動できるルートを独自に見つけ、ついに南の森にたどり着く
+",NULL,NULL,NULL,NULL
+NULL,instructions,4,668845,0.0-4.0,201371,structured,2025/8/8 11:32,2025/8/8 11:51,main_task_inst_tl,Array,66575,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,1180276,0.0-5.0,201371,structured,2025/8/8 11:32,2025/8/8 11:51,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"カラスは、右の翼がわずかに短いため、他の仲間たちのように速く、高く飛べませんでした。いつも群れの後ろを飛び、見慣れた山間の集落で物思いにふけるのが彼の日常でした。
+
+ある年、厳しい冬が訪れる兆しが見え、群れは温暖な南の森への大移動を決意します。カラスも必死に皆についていこうとしますが、体力はみるみるうちに消耗していきました。そして、旅の途中で嵐に遭い、ついに群れからはぐれてしまいます。傷ついた翼はさらに痛みを増し、たどり着いた見知らぬ森で動けなくなってしまいました。
+
+絶望に打ちひしがれるカラスでしたが、故郷の集落で培われた鋭い観察力が彼を救います。他の動物たちが見向きもしない、人間の残した食べ物のありかを彼は知っていました。また、速く飛べない代わりに、彼は地面を歩き、低い木々を伝い、傷ついた翼でも安全に移動できる独自のルートを見つけ出します。そうして、彼はついに南の森へとたどり着くのです。
+
+遅れて到着したカラスは、群れの仲間たちを驚かせました。彼がもたらした、人間の知恵を活かした食料の知識は、皆の食卓を豊かにし、カラスはいつしか群れの中で、なくてはならない存在になっていきました。彼の弱点だった翼は、彼が自分だけの強みを見つけるための、かけがえのない道しるべとなったのでした。",511430,222787,NULL
+NULL,html-keyboard-response,6,1184542,0.0-6.0,201371,structured,2025/8/8 11:32,2025/8/8 11:51,debrief,NULL,4265, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,55,0.0-0.0,4270487,structured,2025/8/8 11:31,2025/8/8 11:53,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,2704,0.0-1.0,4270487,structured,2025/8/8 11:31,2025/8/8 11:53,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,46779,0.0-2.0,4270487,structured,2025/8/8 11:31,2025/8/8 11:53,structure_outline_inst_tl,Array,44074,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,526783,0.0-3.0,4270487,structured,2025/8/8 11:31,2025/8/8 11:53,structure_outline_task,NULL,NULL,Array,なし,普段は都会でサラリーマンとして仕事に忙殺される毎日を過ごしているが、ふとした時に長期休暇を取って日々の疲れをいやすために一人で旅に出かける。時間には余裕があるので自分で車を運転せず、のんびり鉄道で旅をしようと決めて出発した。,"途中まで順調に進んでいたが、とあるローカル線で乗ろうとしていた電車が災害のため運休していたためバスなどのほかの移動方法がないか探していた。
+タクシーは呼べば来るが正直いくらかかるかわからずそこまでの余裕はない。",目的地方面へ行くバスが見つからず、駅で途方に暮れていた。夕方になりあきらめて自宅に戻ろうかと思っていたところ居合わせた現地の人に声をかけられた。事情を話したところたまたま目的地方面に住んでいるので買えるついでに車に乗せてくれて目的地近くまで無事に到着することができた,NULL,NULL,NULL,NULL
+NULL,instructions,4,545927,0.0-4.0,4270487,structured,2025/8/8 11:31,2025/8/8 11:53,main_task_inst_tl,Array,19143,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,1277200,0.0-5.0,4270487,structured,2025/8/8 11:31,2025/8/8 11:53,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"私は都内の企業に勤めている市がないサラリーマンだ。毎日残業が多くやりがいはあるものの疲れがたまる一方の毎日を過ごしている。
+先日大きなプロジェクトを終わらせたこともあり長期の休暇を取ってふと一人旅に出かけることにした。
+時間に余裕があるので車を運転しての移動より普段はあまり使わないローカル線でののんびりとした旅をすることにした。
+
+出発してしばらくは順調に旅程を進めることが出来たが、とある地方のローカル線でたまたま運悪く運休している区間がありその先に進むことが出来なくなった。
+タクシーを拾って運休区間を進もうかと思ったが、結構な距離があり土地勘もないので費用面で難しいと感じバスなどの公共交通機関や振り替えがないかと方々問い合わせていると徐々に日が暮れてきた。
+仮にバス路線があったとしても田舎であれば最終便時間も早いだろうし土地勘のない停留所で終点になったら目も当てられない。
+ちょっと無計画な旅だったかと後悔しつつあきらめて岐路につくべきか悩んでいたところたまたま居合わせた地元民と思われる人にどうしたのかと声をかけられた。
+事情を説明して旅をあきらめようかと話したところたまたま目的地方面に住んでいるということで車に乗せてもらえることになった。
+せっかく旅に来てくれたのなら楽しんでほしいと優しい言葉をかけてもらいとても暖かい気森になった。",731272,35933,NULL
+NULL,html-keyboard-response,6,1281709,0.0-6.0,4270487,structured,2025/8/8 11:31,2025/8/8 11:53,debrief,NULL,4507, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,14,0.0-0.0,5227688,structured,2025/8/8 11:32,2025/8/8 11:55,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,3409,0.0-1.0,5227688,structured,2025/8/8 11:32,2025/8/8 11:55,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,101281,0.0-2.0,5227688,structured,2025/8/8 11:32,2025/8/8 11:55,structure_outline_inst_tl,Array,97870,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,581286,0.0-3.0,5227688,structured,2025/8/8 11:32,2025/8/8 11:55,structure_outline_task,NULL,NULL,Array,なし,定年退職した男は山登りに憧れを抱いていたが、若い頃から体が弱くチャレンジできないでいた。しかし、退職を機に思い切って富士山登山に挑戦してみることにした。,高地順応するためのトレーニングが半年は必要と聞いて、まずは1時間のウォーキングから始める男。しかし30分程でバテテしまう。根本的な体力作りが必要と感じた男は、食生活、筋トレ、山へ挑む心構えを身をもって勉強していく。,トレーニングの成果で長時間の登山にも耐えられる体力を身につけた男。若干の不安を抱きつつも、憧れの富士山登山に挑戦する。途中、悪天候に見舞われながらも無事登頂し御来光を拝むことが出来た。男の心は何とも言えない達成感と夢を叶えた喜びでいっぱいだった。,NULL,NULL,NULL,NULL
+NULL,instructions,4,635755,0.0-4.0,5227688,structured,2025/8/8 11:32,2025/8/8 11:55,main_task_inst_tl,Array,54463,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,1405533,0.0-5.0,5227688,structured,2025/8/8 11:32,2025/8/8 11:55,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"山野ノボル60歳は定年退職を機に、憧れだった富士山登山に挑戦してみることにした。若い頃からひ弱で体力面には自信がなかったが、テレビや本の影響で富士山登山への思いは強まるばかり。
+不安と期待を抱きつつ、山登りへの準備をすすめることにした。まずは体力作りのために1時間のウォーキングをすることにしたノボル。しかし思いの外、体力を消耗し30分歩くだけでバテテしまった。このままでは富士山どころではない。まずは体力作り、食事面などを見直すことにした。少しずつ体力を強化していくノボル。1時間のウォーキングもへばらずこなせるようになり、食後のプロテインを摂取したり余念がない。登山用グッズも揃えた。富士山へ挑む日が近づいていた。ついに富士山登山へ挑むノボル。不安と緊張、興奮を胸に一歩一歩登っていく。途中、雨に見舞われたりしながらも自分のペースを守り無事登頂を果たす。そんなノボルの努力に応えるように御来光も綺麗に現れ、感無量のノボル。今までのトレーニングは無駄ではなかったと喜びに浸るのであった。下山したノボルは小腹が空いていたので、食堂でおでんとビールを堪能。おでんに入っていたウィンナーがタコさんウィンナーになっていて、ちょっとほっこりするのだった。",769776,14616,NULL
+NULL,html-keyboard-response,6,1409013,0.0-6.0,5227688,structured,2025/8/8 11:32,2025/8/8 11:55,debrief,NULL,3477, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,15,0.0-0.0,5231896,structured,2025/8/8 11:32,2025/8/8 11:57,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,15529,0.0-1.0,5231896,structured,2025/8/8 11:32,2025/8/8 11:57,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,183840,0.0-2.0,5231896,structured,2025/8/8 11:32,2025/8/8 11:57,structure_outline_inst_tl,Array,168309,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,663848,0.0-3.0,5231896,structured,2025/8/8 11:32,2025/8/8 11:57,structure_outline_task,NULL,NULL,Array,なし,ここ最近元気のない森がありました。その森を元気にするために立ち上がる少年がいました。,その活動をしようとし始めた最中、一人の少女に出会った。その少女によれば、森を助けることができるアイテムがある場所を知っているという。そして一緒に行くことになった。行くと実際に助けられるアイテムがあったのだが、見つけた途端、急に「それは私の物だ。」と少女が言い出して揉める事になった。,そのうち、そのアイテムがきらりと眩しい光を放ち始めました。二人でびっくりしていると、その光が今来た森の方角を差していて、背中を押されたかのように、二人で確認しに行くと、さっきまでの森ではなく、元気を取り戻した力強い森になっていました。先ほどのケンカがウソのように、二人で手に手をとって喜び合いました。,NULL,NULL,NULL,NULL
+NULL,instructions,4,720303,0.0-4.0,5231896,structured,2025/8/8 11:32,2025/8/8 11:57,main_task_inst_tl,Array,56454,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,1446743,0.0-5.0,5231896,structured,2025/8/8 11:32,2025/8/8 11:57,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,生まれからずっとともに携わってい来たこの森を少しでも元気にするために、どうしても動きたくなった少年が、何かやり方がないのか、必死に考えていた。途方に暮れていたが、少女に出会った。その少女も同じ考えで、一緒に行動する事になった。その少女は助けられるアイテムを知っているという事で、一緒に探しに行きました。すぐに見つける事が出来ましたが、見つかった途端に、そのアイテムの権利のケンカに発展してしまいました。一緒に解決するつもりだったのに、けんかになってしまって、居心地の悪い感じになりました。二人でもめている最中に、キラッそのアイテムが光り始めて、一筋の光の筋が伸びていきました。驚いて顔を見合わせていると、その光の先に行きたくなって、背中を押されるように、二人で見に行くと、さっきまでの森ではなくなって、昔の一番元気があった頃の森になっていて、二人ともとても喜びました。ケンカも気付いたら辞めていて、それからずっと二人とも仲良く森で過ごすことになりました。,726438,27581,NULL
+NULL,html-keyboard-response,6,1449645,0.0-6.0,5231896,structured,2025/8/8 11:32,2025/8/8 11:57,debrief,NULL,2900, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,247,0.0-0.0,5860381,structured,2025/8/8 11:37,2025/8/8 11:56,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,5272,0.0-1.0,5860381,structured,2025/8/8 11:37,2025/8/8 11:56,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,145936,0.0-2.0,5860381,structured,2025/8/8 11:37,2025/8/8 11:56,structure_outline_inst_tl,Array,140659,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,625997,0.0-3.0,5860381,structured,2025/8/8 11:37,2025/8/8 11:56,structure_outline_task,NULL,NULL,Array,なし,馬券を購入した。しっかり予想をしたのでかなり自信がある。とても楽しみだ。,しかし、馬券を間違って買っていたことに後から気づいた。絶望的だ。,絶望感に苛まれて諦めていたら、間違って買った馬券が見事的中した。,NULL,NULL,NULL,NULL
+NULL,instructions,4,672981,0.0-4.0,5860381,structured,2025/8/8 11:37,2025/8/8 11:56,main_task_inst_tl,Array,46968,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,1156958,0.0-5.0,5860381,structured,2025/8/8 11:37,2025/8/8 11:56,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,馬券を購入した。事前にしっかりと予想をしたのでかなり自信がありとても楽しみだ。自分が購入した馬券を見てみると、予想した馬とは別な馬を購入していたことに気づいた。間違って購入してしまったのだ。絶望感に苛まれながら諦めモードでレースを見ていたら、なんと間違って購入した馬券が的中していた。,483963,17452,NULL
+NULL,html-keyboard-response,6,1165735,0.0-6.0,5860381,structured,2025/8/8 11:37,2025/8/8 11:56,debrief,NULL,8766, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,58,0.0-0.0,4409144,structured,2025/8/8 11:36,2025/8/8 11:58,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,5022,0.0-1.0,4409144,structured,2025/8/8 11:36,2025/8/8 11:58,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,182942,0.0-2.0,4409144,structured,2025/8/8 11:36,2025/8/8 11:58,structure_outline_inst_tl,Array,177915,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,662966,0.0-3.0,4409144,structured,2025/8/8 11:36,2025/8/8 11:58,structure_outline_task,NULL,NULL,Array,なし,"・勉強が苦手な主人公のまみはテストで良い点を取ることを目標としていた時に道端で「勉強ができる鉛筆」と書かれた鉛筆を拾う。
+・世界平和を考える直樹が戦争について研究をしていたところ、夢で戦地に突然行くことになる。","・「勉強ができる鉛筆」を使って学校での予習や復習をしてもなかなか勉強が分からず悩む。勉強ができない自分に苛立ちを感じながらも、先生や友達に分からないことを聞いてなんとか勉強に取り組む。
+・戦地では本や映像で見た戦争の世界よりも悲惨な現状を目の当たりにし、絶望を感じる。",・まみは着実に勉強の基本を身に着けることができるようになり、「勉強ができる鉛筆」を使わなくてもテストで良い点が取れるようになった。,NULL,NULL,NULL,NULL
+NULL,instructions,4,739301,0.0-4.0,4409144,structured,2025/8/8 11:36,2025/8/8 11:58,main_task_inst_tl,Array,76299,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,1298187,0.0-5.0,4409144,structured,2025/8/8 11:36,2025/8/8 11:58,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"勉強が苦手な小学三年生のまみは、どうしたらテストで良い点が取れるか悩んでいた。ある日、学校の帰り道に「勉強ができる鉛筆」と書かれた鉛筆を拾う。その鉛筆は握っていると笑い声が聞こえてきたり、泣き声が聞こえたりする不思議な鉛筆だった。
+まみはその鉛筆を使って学校の予習や復習をなんとか毎日取り組むようにする。鉛筆から聞こえる笑い声や鳴き声に邪魔されながらも、自宅ではその鉛筆を使って学習するようにした。学校では先生や友達に勉強の分からない箇所を聞いたりして、以前よりも勉強に真面目に取り組むようになる。
+その結果、いつの間にか勉強が自然と分かるようになり、「勉強ができる鉛筆」を使わなくても自分自身の力でテストで良い点が取れるくらい勉強ができるようになっていた。そんな時に自宅で「勉強ができる鉛筆」を握ってみると、もう笑い声も泣き声も聞こえなくなっていた。",558882,11860,NULL
+NULL,html-keyboard-response,6,1303864,0.0-6.0,4409144,structured,2025/8/8 11:36,2025/8/8 11:58,debrief,NULL,5674, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,45,0.0-0.0,6492409,structured,2025/8/8 11:34,2025/8/8 11:57,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,3288,0.0-1.0,6492409,structured,2025/8/8 11:34,2025/8/8 11:57,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,184193,0.0-2.0,6492409,structured,2025/8/8 11:34,2025/8/8 11:57,structure_outline_inst_tl,Array,180903,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,664217,0.0-3.0,6492409,structured,2025/8/8 11:34,2025/8/8 11:57,structure_outline_task,NULL,NULL,Array,アナと雪の女王,"・ある国に二人の王族の姉妹がいた
+・姉妹の両親は死亡しており、姉が取り仕切ることになっていた
+・しかし、姉は炎を操る魔法の力を持っていた
+・妹には隠していたが、戴冠式でその魔法を間違って使って妹を傷つけてしまい、逃亡した","・戻ろうとしない姉と連れ戻そうとする妹の追跡劇が始まる
+・姉は感情が高ぶるとほかのものも燃やしてしまい、どんどん孤立をはかるが、妹はあきらめず対話を試みる","・姉は自分のことを思っていくれる妹に心を打たれ、愛する国と妹のために帰国する決心をする
+・姉が妹にその能力のことを正直に話し、うまくつきあっていこうということで完結",NULL,NULL,NULL,NULL
+NULL,instructions,4,701821,0.0-4.0,6492409,structured,2025/8/8 11:34,2025/8/8 11:57,main_task_inst_tl,Array,37601,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,1379256,0.0-5.0,6492409,structured,2025/8/8 11:34,2025/8/8 11:57,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,ある国に姉のアサと妹のエマという王族の姉妹がいた。両親は死亡しており、姉が王女になる戴冠式を迎えようとしていた。だが、アサには炎を操る魔法の能力があり、関h上の高ぶりが悪化させるものであった。しかし、そのことを隠して生きてきた。戴冠式当日になり、緊張したアサは魔法が誤って発揮されてしまった。それでエマはやけどしてしまい、アサは怖くなり、逃亡してしまった。エマはなぜアサがいなくなってしまったのか分からず、必死で追いかけた。エマも国も傷つけたくないアサは慌ててるあまり、魔法を何度も使ってしまい町中を焼いてしまう。それでも、エマはアサのために多くの人の協力のもと、アサのもとに追いつく。二人は話し合い、たくさんけんかしたが、やがて、二人ともお互いのことを想っていることに気づき、和解する。このような苦難を乗り越え帰国し、うまく能力を付き合いながら生きていくことを決心した。,677427,9002,NULL
+NULL,html-keyboard-response,6,1381480,0.0-6.0,6492409,structured,2025/8/8 11:34,2025/8/8 11:57,debrief,NULL,2222, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,11,0.0-0.0,5138531,structured,2025/8/8 11:32,2025/8/8 12:00,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,5730,0.0-1.0,5138531,structured,2025/8/8 11:32,2025/8/8 12:00,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,397540,0.0-2.0,5138531,structured,2025/8/8 11:32,2025/8/8 12:00,structure_outline_inst_tl,Array,391810,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,877545,0.0-3.0,5138531,structured,2025/8/8 11:32,2025/8/8 12:00,structure_outline_task,NULL,NULL,Array,なし,"・小さな町の片隅にある魚屋は猫たちに大人気
+・店主の老夫婦は毎日魚をさばいた時に出る端切れを野良猫に与えていた
+・猫のリーダーである「タマキング」と呼ばれる強くて立派な猫がいる","・魚屋の魚が全て無くなる事件が起こる
+・魚が無くなっては猫の食べるものが無くなってしまうので無くなった原因を調査する
+・ネズミの軍団が魚屋の魚を盗み、","・魚屋に魚が返却され、店主の老夫婦から深く感謝される
+・猫たちはいつもの日常を取り戻す",NULL,NULL,NULL,NULL
+NULL,instructions,4,944699,0.0-4.0,5138531,structured,2025/8/8 11:32,2025/8/8 12:00,main_task_inst_tl,Array,67153,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,1664720,0.0-5.0,5138531,structured,2025/8/8 11:32,2025/8/8 12:00,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"小さな町の片隅に魚屋があり、老夫婦がその魚屋で勤めていた。その町には猫がたくさん住んでいて、その中に立派な猫のリーダーである、タマキングと呼ばれる猫がいた。魚屋の店主は本来は捨てるはずの魚の端切れを毎日猫たちにあげていた。
+ある時、その魚屋でお店の魚が全て盗まれるという事件が起こった。魚が盗まれて困るのは老夫婦だけではなく、猫たちも同じだった。魚が無くなってしまうと猫たちが食べるものも無くなってしまう。そこで、タマキングを中心として猫たちは盗まれた魚を探すことを決意する。するとネズミたちのアジトを見つけ、そこに大量の魚があった。魚を盗んだのはネズミたちだった。そのネズミたちは盗んだ魚を売って自分たちのアジトを大きくするための資金を集めていたのだった。
+何度も抵抗されながらタマキングはネズミたちを退治することに成功し、見事に魚を全て取り戻したのだった。タマキングは取り戻した魚を魚屋に戻し、店主の老夫婦から深く感謝されたのだった。さらに、その町の長からも勇者として表彰されたのだった。タマキングのおかげで、魚屋の老夫婦も猫たちもいつもの平和な日常を取り戻したのだった。",720019,7907,NULL
+NULL,html-keyboard-response,6,1667944,0.0-6.0,5138531,structured,2025/8/8 11:32,2025/8/8 12:00,debrief,NULL,3223, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,6,0.0-0.0,276409,structured,2025/8/8 11:32,2025/8/8 12:00,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,2985,0.0-1.0,276409,structured,2025/8/8 11:32,2025/8/8 12:00,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,70171,0.0-2.0,276409,structured,2025/8/8 11:32,2025/8/8 12:00,structure_outline_inst_tl,Array,67185,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,550173,0.0-3.0,276409,structured,2025/8/8 11:32,2025/8/8 12:00,structure_outline_task,NULL,NULL,Array,なし,"・試験に落ちた
+・霊に呪いをかけられた
+","・カンニングをしないと受からないと思ったのでバレない訓練をする
+・早く呪いを解かないと死んでしまう","・無事に見つからないで合格できた
+・ぎりぎりで何とか呪いを解くことができた",NULL,NULL,NULL,NULL
+NULL,instructions,4,608834,0.0-4.0,276409,structured,2025/8/8 11:32,2025/8/8 12:00,main_task_inst_tl,Array,58660,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,1659898,0.0-5.0,276409,structured,2025/8/8 11:32,2025/8/8 12:00,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,ある日目の前に先祖の幽霊が現れて、自分の行いがあまりにも人の道から外れているので呪いをかけて5時間以内に改心しなければあの世に連れて行ってやると脅された。解決する方法は2人の他人から感謝されるようなことをしなければならないと言われた。仕方がないので困っている人を探して救うしかないと辺りを見回したけどそんな人はいなかった。どうしようかと立ち尽くしていたら突然激しい雨が降ってきたのでこれだと思いコンビニに行って傘を2本買い、誰か困っていないか探したらほとんどの人が傘を持っていなかったので近くにいた人に半ば強引に差し上げますと言って傘を手渡してやった。そうしたら霊がやって来てそんなことで改心したことになるかと心底あきれた表情だったけど自分の程度を分かっていたのかため息まじりに「仕方がない、どうせ無理だろうからこれくらいで勘弁してやる」と言われ何とか呪いを解いてもらったので助かったのでありました。,1051064,14500,NULL
+NULL,html-keyboard-response,6,1662338,0.0-6.0,276409,structured,2025/8/8 11:32,2025/8/8 12:00,debrief,NULL,2440, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,64,0.0-0.0,4858226,structured,2025/8/8 11:33,2025/8/8 12:00,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,4273,0.0-1.0,4858226,structured,2025/8/8 11:33,2025/8/8 12:00,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,139956,0.0-2.0,4858226,structured,2025/8/8 11:33,2025/8/8 12:00,structure_outline_inst_tl,Array,135680,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,619971,0.0-3.0,4858226,structured,2025/8/8 11:33,2025/8/8 12:00,structure_outline_task,NULL,NULL,Array,なし,ある日、突然ある国から伝染病が起き始めた。いままでに例がない症例だけに医者や学者が首をひねる状態に陥る。さまざまな人がこの謎に挑んできたが、なかなか対抗処置がみつからなかった。,いろいろと処置を施していた医者や学者はつねにその病気の菌に近いところにいたために、感染する人が増え始め、有力と言われた人々がどんどんと病に落ちることになる。,"しばらくすると感染する人が激減し始めた。なんとこの病原菌は自然に消えてゆくものであって、結局はなにもしなくても３か月ほどで消滅することがわかってきた。
+この菌を作り出した組織は一時的に国をパニックに陥れるために作り出したということが後になってわかり、この組織はその後捉えられて終末を迎えた。",NULL,NULL,NULL,NULL
+NULL,instructions,4,672276,0.0-4.0,4858226,structured,2025/8/8 11:33,2025/8/8 12:00,main_task_inst_tl,Array,52303,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,1641234,0.0-5.0,4858226,structured,2025/8/8 11:33,2025/8/8 12:00,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"ある日、突然ある国から伝染病が起き始める。
+過去にない症状なので初めのころはパニック状態が続いた。
+いろんな国の学者や医者がこの病原菌について調べ始めたが、なかなかいい答えが見つからなかった。
+この病原菌のもっとも近くにいたのはその学者たちであったので、だんだんと学者たちにも感染者が増えていった。
+一番研究をしている人々が解決策を調べないといけないのだが、自らが感染してしまっているので、解決策はなかなかみつからずに難航していた。
+しばらくその流れが続いたころ、急速に感染者が増えていたのがなぜか和らぎ始めた。
+なぜかはわからないが、以前よりも感染が減ってきているような感じなのだ。
+いろいろと調べたところ、どうやらこの菌は３か月ほどで自然に消滅するものだと判明する。
+ちょうどそのころ、警察にある情報が入り始める。
+どうやら感染菌はある組織が作り出したもので、国をただパニックにするためだけにに作り出したようだという。
+結果その組織は警察に捕まり、この騒動はゆっくりと収まったのである。",968958,21032,NULL
+NULL,html-keyboard-response,6,1643596,0.0-6.0,4858226,structured,2025/8/8 11:33,2025/8/8 12:00,debrief,NULL,2357, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,7,0.0-0.0,4765315,structured,2025/8/8 11:37,2025/8/8 12:02,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,3359,0.0-1.0,4765315,structured,2025/8/8 11:37,2025/8/8 12:02,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,264571,0.0-2.0,4765315,structured,2025/8/8 11:37,2025/8/8 12:02,structure_outline_inst_tl,Array,261201,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,744749,0.0-3.0,4765315,structured,2025/8/8 11:37,2025/8/8 12:02,structure_outline_task,NULL,NULL,Array,ショーシャンクの空に,・無実の罪で刑務所に入る,"・脱走を試みる
+","・無事脱出
+・自由を手に入れる",NULL,NULL,NULL,NULL
+NULL,instructions,4,812685,0.0-4.0,4765315,structured,2025/8/8 11:37,2025/8/8 12:02,main_task_inst_tl,Array,67929,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,1482025,0.0-5.0,4765315,structured,2025/8/8 11:37,2025/8/8 12:02,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,すみません、思いつかないです。,669339,509299,NULL
+NULL,html-keyboard-response,6,1488315,0.0-6.0,4765315,structured,2025/8/8 11:37,2025/8/8 12:02,debrief,NULL,6289, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,30,0.0-0.0,163607,structured,2025/8/8 11:34,2025/8/8 12:02,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,4162,0.0-1.0,163607,structured,2025/8/8 11:34,2025/8/8 12:02,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,208748,0.0-2.0,163607,structured,2025/8/8 11:34,2025/8/8 12:02,structure_outline_inst_tl,Array,204585,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,688752,0.0-3.0,163607,structured,2025/8/8 11:34,2025/8/8 12:02,structure_outline_task,NULL,NULL,Array,なし,朝、庭の隅をふと見てみると植えた覚えのない植物の芽が出ていた。,抜いてしまうのもかわいそうだと毎日水をやって1週間もすると、名も知らぬ植物はみるみる30?ほどの大きさに育ち青々とした葉を何枚も付けた。ある朝、水をやる為に名も知らぬ植物を見てみると、無数の小さな虫が付着しているではないか。,自身で虫を追い払う事も出来ない名も知らぬ植物に代わり、私は虫を丁寧に取り除いた。翌朝、名も知らぬ植物は小さな赤い花を咲かせた。その花はまるで私にありがとうといっているように見えた。,NULL,NULL,NULL,NULL
+NULL,instructions,4,727756,0.0-4.0,163607,structured,2025/8/8 11:34,2025/8/8 12:02,main_task_inst_tl,Array,39002,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,1679800,0.0-5.0,163607,structured,2025/8/8 11:34,2025/8/8 12:02,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"　朝、毎日欠かさない庭に植えた植物の水やりをしながら庭の隅に目をやると、植えた覚えのない植物が芽を出している。
+何処からか飛んできた種が芽吹いたのか小さな芽が可愛らしく、他の植物同様に水を掛けてやる。
+　日に日に成長していく名も知らぬ植物は1週間もすると大きさが30?にもなり、艶やかな緑の葉を付け立派に育っている様子に嬉しくなる。ある朝、名も知らぬ花に水をやりながら見てみると小さなつぼみが付いている。どんな花を咲かせてくれるのか楽しみになり開花が待ち遠しいと思えた。
+　食朝、名も知らぬ植物を見てみるとつぼみの周りに無数の小さな虫が付いているのが見えた。あまりの虫の数に驚きながら、自分で虫を取る事が出来ない名も知らぬ植物に代わり、私が虫を取り除く事にした。
+　虫はじっとしているが気持ちのいい姿ではなく、恐る恐る手で取ってみる。はめていた手袋に上手く虫は付き見事に取り除く事ができた。この調子だとばかりにすべての虫を取り除いていった。
+　翌朝、名も知らぬ植物を見ると小さな赤い可憐な花を咲せていた。朝陽に照らされて輝きながらその花はまるで私に微笑みかけているかのように咲き誇っていた。",952043,15578,NULL
+NULL,html-keyboard-response,6,1683525,0.0-6.0,163607,structured,2025/8/8 11:34,2025/8/8 12:02,debrief,NULL,3723, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,72,0.0-0.0,4408530,structured,2025/8/8 11:34,2025/8/8 12:03,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,2867,0.0-1.0,4408530,structured,2025/8/8 11:34,2025/8/8 12:03,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,113365,0.0-2.0,4408530,structured,2025/8/8 11:34,2025/8/8 12:03,structure_outline_inst_tl,Array,110497,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,593387,0.0-3.0,4408530,structured,2025/8/8 11:34,2025/8/8 12:03,structure_outline_task,NULL,NULL,Array,なし,ある柔道少年の成長。5歳から柔道を始めた健は、オリンピックを夢見ながら稽古に励んでいます。,15歳になった健は、さらなる試練を課して、柔道の頂点を目指すために、高校は柔道の名門校に進みます。そこでは、県で個人優勝を勝ち取りました。,最終的に、大学は柔道の推薦で入り、その後は色々な経験の末に柔道のコーチとして、自分の母校である高校に入ることになります。オリンピックの夢は叶いませんでしたが、そこでは、自分の経験を活かしながら若手を育てる側に立つようになり、「自分の人生に悔いなし！」と思いながら生きてゆきます。,NULL,NULL,NULL,NULL
+NULL,instructions,4,631908,0.0-4.0,4408530,structured,2025/8/8 11:34,2025/8/8 12:03,main_task_inst_tl,Array,38518,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,1758793,0.0-5.0,4408530,structured,2025/8/8 11:34,2025/8/8 12:03,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,5歳から柔道をはじめた健は、オリンピックを目指して毎日柔道に励んでいます。15歳になる頃、健は親に柔道の名門高校に進学したいとお願いします。そして、そこで柔道を始めますが、そこでは先輩からのいじめやシゴキが半端ではなく、限りなく地獄のような日々でした。しかし、健は挫けず頑張りぬきました。そして、高校3年の県大会の個人戦では見事優勝に輝き全国大会に出場しましたが、結果はベスト８でした。この時、健は自分の努力が報われた気持ちになりました。その後、大学は上記の成績により推薦で進むことになりました。そこではそれほど良い成績は残せませんでしたが、卒業後は、健の母校である高校のコーチとして入ることが出来ました。その後の健は、定年になるまで母校の柔道部の為に頑張り、数々の選手を育てていきました。定年後は近所に柔道場を開き、子供を育てながら晩年を過ごしました。健の抱いたオリンピックの夢は叶いませんでしたが、「自分の人生に悔いなし！」と晩年は教え子たちに語っていたそうです。健のような一途な考えは、今の若い人にも持って欲しいですね。,1126881,56753,NULL
+NULL,html-keyboard-response,6,1762699,0.0-6.0,4408530,structured,2025/8/8 11:34,2025/8/8 12:03,debrief,NULL,3901, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,6,0.0-0.0,4818552,structured,2025/8/8 11:35,2025/8/8 12:04,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,16905,0.0-1.0,4818552,structured,2025/8/8 11:35,2025/8/8 12:04,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,96712,0.0-2.0,4818552,structured,2025/8/8 11:35,2025/8/8 12:04,structure_outline_inst_tl,Array,79806,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,576721,0.0-3.0,4818552,structured,2025/8/8 11:35,2025/8/8 12:04,structure_outline_task,NULL,NULL,Array,なし,一人の風変わりな少女が学校である事件を犯して転校させられました。,転校させられた学校で殺人事件が発生し、前歴から疑われます。しかし、少女は身の潔白を証明させるために、始めは対立していた同級生たちと意見を交えながら共に事件解決へ奮闘します。,見事に犯人である教師を見つけて、事件を解決に導きました。,NULL,NULL,NULL,NULL
+NULL,instructions,4,649409,0.0-4.0,4818552,structured,2025/8/8 11:35,2025/8/8 12:04,main_task_inst_tl,Array,72687,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,1699995,0.0-5.0,4818552,structured,2025/8/8 11:35,2025/8/8 12:04,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"少女は少し変わった性格をしていた。そのため、学校ではいつも一人だった。
+そんな折、一人の生徒と言い合いになりつい殴ってしまい、その生徒の親御さんから訴えられてしまった。
+訴えられて裁判沙汰になり、転校を余儀なくされた。
+転校先の学校ではすでに少女のことが噂されており、好奇と蔑まれた視線に晒されていた。
+そんな折、一人の女子生徒が階段から落ちて亡くなった。始めは事故だと思われたが、運悪く少女がそこを通りかかったことで犯人扱いされてしまう。
+前歴のこともあり疑われるが、少女は身の潔白を証明させるために、聞き込みを始める。始めは協力を断っていた同級生たちも彼女の本意気な態度に、徐々に心を開き始めてともに解決しようと協力します。
+すると、亡くなった女子生徒には悪い噂がついており、なんと一人の男子教諭と付き合っているという真実を突き止めたのでした。
+少女はその男子教諭をスタンガンで拉致し、拷問して真実を突き詰めようとする。
+恐怖に慄く男子教諭は真実を話し、女子生徒を階段から突き落として殺害したことを認めた。
+動機は別れのもつれによる言い合いで怒りに身を任せての単調なものだった。
+あらかじめ、ボイスレコーダーを隠し持っていた少女はその言葉を録音し、警察に提出したことで事件は見事に解決するのだった。
+この事件をきっかけに少女は同級生たちと心を通わせて、引き続き学校生活を送るのだった。",1050585,15047,NULL
+NULL,html-keyboard-response,6,1705143,0.0-6.0,4818552,structured,2025/8/8 11:35,2025/8/8 12:04,debrief,NULL,5146, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,5,0.0-0.0,6157211,structured,2025/8/8 11:35,2025/8/8 12:04,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,3454,0.0-1.0,6157211,structured,2025/8/8 11:35,2025/8/8 12:04,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,131609,0.0-2.0,6157211,structured,2025/8/8 11:35,2025/8/8 12:04,structure_outline_inst_tl,Array,128154,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,611612,0.0-3.0,6157211,structured,2025/8/8 11:35,2025/8/8 12:04,structure_outline_task,NULL,NULL,Array,なし,"・1.魚と人間の禁断の恋
+・2.人間がプランクトンになってしまった
+・3.空に浮かんでしまった犬を助ける
+・4.マウスになりたいキーボード","・1.結ばれるはずのない他種族の恋に、様々な試練が降りかかる
+・2．ある日突然プランクトンになってしまった人間が、どうにかして人間に戻ろうと試行錯誤する
+・3．風船に括りつけられた犬が空に浮かんでしまい、地上に戻そうと周囲の人が知恵を絞る
+・4．どうしてもマウスになりたいキーボードが方法を探す","・1．魚と人間の恋の障壁を取り除き、無事に魚と人間が結ばれる
+・2．プランクトンになった人間が、ヒトデの力を借りて人間に戻る
+・3．吹き矢とトランポリンを使い、犬を地上に戻すことに成功する
+・4．AIに方法を質問し、キーボードになる方法を見つけて、無事にマウスはキーボードになることができた。",NULL,NULL,NULL,NULL
+NULL,instructions,4,671054,0.0-4.0,6157211,structured,2025/8/8 11:35,2025/8/8 12:04,main_task_inst_tl,Array,59440,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,1769099,0.0-5.0,6157211,structured,2025/8/8 11:35,2025/8/8 12:04,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,1．ある日、人間がペットショップを覗いていると、ふと一つの水槽が目に入った。人間は一目見て魚に恋に落ちた。店員に自分が恋をしたことを伝えると、「頭がおかしいのか？」と嘲笑されてしまう。それでも、自分の恋心に正直になりたいと願った人間は、魚を購入しようとする。しかし、不審に思った店員に購入を断られてしまう。「そんなに買いたかったら10倍の値段でなら売るよ」と言われてしまい、途方に暮れる人間。さらに、人間は自分の部屋では魚を買うことができるスペースがないことを思い出す。それでも魚との恋を成就させたい人間は、ギャンブルでお金を増やそうと試みる。突発的な考えだったが、見事ギャンブルは成功し、手元の資金が100倍になった。魚の購入資金ができた人間は、まず、不動産に行って今よりも大きい部屋を借りることにした。魚と愛し合える十分なスペースの部屋を借りたあと、恋が始まったペットショップに行くことにした。意気揚々とお店のドアを開けると、そこには人間が恋した魚が、今にも買われてしまいそうな場面に遭遇してしまった。焦った人間は、店員と客に詰め寄り「自分が先に買おうとしたんだ！」と大声で叫ぶ。驚いた店員と客は、互いに顔を見合わせて苦笑する。「私が買うので諦めてください」、半笑いで人間に伝える客。「俺はその魚を10倍、いや20倍で買う！」勢いよく啖呵を切った人間に、目を見開いて驚嘆する店員と客。「そこまで言うならどうぞ」、人間のあまりの剣幕に恐れを抱いたのか、客は引き下がることにした。店員は驚きながら「まさか本当に倍の値段、それもさらに倍の値段で買うなんて」と人間に伝えると、人間は優しげな表情でほほ笑んだ。「魚に対する俺の愛は本物だ、これから家に連れ帰って愛し合うのさ」、そう店員に伝えた人間は、魚が入った水槽を大事そうに抱えて家に帰宅する。「これから二人で竜宮城もビックリのパラダイスを築こうな」、そう魚に伝えながら水槽を抱きしめる人間。二人は、これから深く愛し合いながら暮らしていくことになった。,1098044,1846,NULL
+NULL,html-keyboard-response,6,1771294,0.0-6.0,6157211,structured,2025/8/8 11:35,2025/8/8 12:04,debrief,NULL,2194, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,76,0.0-0.0,4441706,structured,2025/8/8 11:36,2025/8/8 12:06,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,26131,0.0-1.0,4441706,structured,2025/8/8 11:36,2025/8/8 12:06,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,92077,0.0-2.0,4441706,structured,2025/8/8 11:36,2025/8/8 12:06,structure_outline_inst_tl,Array,65941,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,572092,0.0-3.0,4441706,structured,2025/8/8 11:36,2025/8/8 12:06,structure_outline_task,NULL,NULL,Array,なし,太郎は野球が好きな小学生である。彼は野球を始めるために、地元のリトルリーグのチームに入った。,太郎は一生懸命、野球の練習をしたものの、なかなか試合に出ることができなかった。それでもかれは諦めることなく、一生懸命野球の練習を続けた。しかし、いつも太郎はベンチで試合を見ているだけであった。太郎はチームをやめることも考えるが、監督の説得で野球を続けることになった。,太郎の努力が実り、ある日の試合で、チームの監督は太郎を代打で起用した。太郎は初めての試合で非常に緊張するが、ヒットを打つことができた。太郎の活躍でチームは逆転し、太郎はその試合のヒーローになった。,NULL,NULL,NULL,NULL
+NULL,instructions,4,616196,0.0-4.0,4441706,structured,2025/8/8 11:36,2025/8/8 12:06,main_task_inst_tl,Array,44100,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,1816203,0.0-5.0,4441706,structured,2025/8/8 11:36,2025/8/8 12:06,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"田中太郎は、子供のころから野球を見ることが好きであった。彼はもともとテレビで野球を見ているだけであったが、次第に自分でも野球がしたいと思うようになった。そのことを太郎は両親に相談したところ、地元で活動しているリトルリーグのチームを教えてもらった。太郎は興味があったので、このチームに入って野球を始めることにした。
+太郎は野球をすることが初めてあったので、チームに入った当初は、なかなかチームの練習についていくことができなかった。太郎はチームの中で一番下手な選手であったため、試合に出ることもできなかった。
+太郎はベンチから試合を見ながら、いつの日か自分も試合に出たいと考えていた。そのために太郎はずっと真面目に練習を続けていたが、どれだけ真面目に練習をしても、太郎は試合に出ることができなかった。
+太郎は次第に、練習をするのが辛くなってきた。いくら練習をしても試合に出られないので、とうとうチームをやめたいと考えるようになった。そのことを太郎は、監督に相談してみたところ、監督はあきらめずに黙って練習を続けろと、太郎をはげました。
+ある日の試合で、太郎はその日もベンチから試合を見ていた。今日も試合に出られないと太郎は考えていたが、チャンスの場面で監督は、太郎を代打に指名する。
+太郎は初めての試合でとても緊張したが、監督の期待にぜひとも応えたいと思った。太郎は練習でずっと努力をしていたので、ヒットを打つことができた。このヒットによってチームは逆転することができた。ずっと補欠だった太郎は、とうとうチームのヒーローになることができたので、とても喜んだ。",1200006,20950,NULL
+NULL,html-keyboard-response,6,1819789,0.0-6.0,4441706,structured,2025/8/8 11:36,2025/8/8 12:06,debrief,NULL,3582, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,219,0.0-0.0,679574,structured,2025/8/8 11:42,2025/8/8 12:09,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,3448,0.0-1.0,679574,structured,2025/8/8 11:42,2025/8/8 12:09,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,104182,0.0-2.0,679574,structured,2025/8/8 11:42,2025/8/8 12:09,structure_outline_inst_tl,Array,100731,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,584159,0.0-3.0,679574,structured,2025/8/8 11:42,2025/8/8 12:09,structure_outline_task,NULL,NULL,Array,ドラえもん,"のび太が野球の試合で打てなかったことで、ジャイアンにいじめられた。
+のび太はジャイアンを見返そうと、ドラえもんにお願いして良い道具がないか聞いた。
+ドラえもんは、のび太のために、「打てるー！」を道具として提供。
+「打てるー！」を使ったのび太は野球の試合でホームランを連発し、ジャイアンを見返す。","あまりにものび太がホームランを連発することで、ジャイアンはのび太を疑う。
+のび太を問いただすと、ドラえもんに「打てるー！」を借りたと告白。
+ジャイアンは、「打てるー！」をのび太から強奪。
+試合で、ジャイアンはホームランを連発した。
+その姿を見たのび太は、自力でホームランを打てるように練習した。","バッティングセンターに通い、のび太は練習に励んだ。
+毎日通ったことで、のび太はついにホームランを自力で打てるようになった。
+それをみてドラえもんも笑顔に。",NULL,NULL,NULL,NULL
+NULL,instructions,4,633176,0.0-4.0,679574,structured,2025/8/8 11:42,2025/8/8 12:09,main_task_inst_tl,Array,49023,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,1635891,0.0-5.0,679574,structured,2025/8/8 11:42,2025/8/8 12:09,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"のび太はいつものように、ジャイアンにいじめられた。今回のいじめられた原因は、野球の試合でのび太が三振ばかりし、打てなかったことだ。
+そのため、のび太はジャイアンを見返そうとドラえもんにお願いをし、何か良い道具がないか聞いた。
+
+すると、ドラえもんは「打てるー！」という道具をのび太のために出した。これを使えば、誰もが簡単にホームランを打てるという魅力的なものだった。のび太は早速「打てるー！」を使った。
+
+これまでの彼からは想像できないほど、簡単にホームランを打てるようになったのだ。4打席連続ホームランを打ち、周囲を驚かせた。
+
+しかし、あまりにものび太がホームランを打つため、ジャイアンはのび太を怪しんだ。ジャイアンは、のび太を問いただし、「何をした」とすごんだ。
+
+それにびびったのび太は、ジャイアンに白状した。「打てるー！」を使ったことをジャイアンに告白したのび太は、いつものようにジャイアンに「打てるー！」を強奪された。
+
+のび太から「打てるー！」を強奪したジャイアンは、当然のようにホームランを連発。卑怯な手で喜ぶジャイアンの姿を目にし、「これではいけない」と、のび太は改心した。
+
+バッティングセンターに連日通い、のび太は猛練習。その甲斐あって、のび太はバッティングセンターで自力でホームランを打てるようになったのだ。のび太の努力を見ていたドラえもんは、彼の努力に微笑んだ。
+
+次の試合、のび太は3打席目までは空振り三振をしていたが、ついに4打席目で念願のホームランを投手の出木杉くんから放った。これを見て、しずかちゃんとドラえもんは抱き合って喜んだのだった。
+
+のび太のホームランを見て、いつもはのび太をいじめていたジャイアンも、このときばかりは彼の頑張りを称えた。のび太は、人生ではじめて打ったホームランに喜んだ。",1002712,10693,NULL
+NULL,html-keyboard-response,6,1638419,0.0-6.0,679574,structured,2025/8/8 11:42,2025/8/8 12:09,debrief,NULL,2523, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,12,0.0-0.0,4277165,structured,2025/8/8 11:36,2025/8/8 12:09,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,2849,0.0-1.0,4277165,structured,2025/8/8 11:36,2025/8/8 12:09,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,180998,0.0-2.0,4277165,structured,2025/8/8 11:36,2025/8/8 12:09,structure_outline_inst_tl,Array,178147,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,660999,0.0-3.0,4277165,structured,2025/8/8 11:36,2025/8/8 12:09,structure_outline_task,NULL,NULL,Array,なし,"主人公が死亡する（事故か病気）
+目が覚めると日本で大災害があった1年前にタイムリープしている","大災害の犠牲を防ごうと主人公はいろいろな事（犯罪も含む）をする
+自分の身の回りの人の犠牲も関係なく奔走する","主人公は変人のような扱いをされ1年後の大災害で死亡する
+その後主人公の主張の正しさが世間に広まる
+",NULL,NULL,NULL,NULL
+NULL,instructions,4,761614,0.0-4.0,4277165,structured,2025/8/8 11:36,2025/8/8 12:09,main_task_inst_tl,Array,100614,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,1961616,0.0-5.0,4277165,structured,2025/8/8 11:36,2025/8/8 12:09,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"主人公のたかしはごく普通の男性で家族は妻と子の3人暮らしていたある日
+家族旅行の途中で事故に合ってしまう
+目が覚めるとそこは昔住んでいた大学時代の部屋だったふとテレビに目をやるとそこには昔好きだったテレビの生放送をやっていた。
+タイムリープしていることを気づくたかしはその後におこる大災害を止めるため奔走する、宗教の教祖になり信者を作り特定の地域には人が住めないと言い災害が起こる地域には住まないようにSNSで主張する、だがそのようなことを信じる人はいなく災害は起こってしまう。
+たかしは無力感になり災害のある時刻場所に行き最初の犠牲者になる。
+その後主人公の主張の正しさが世間に広まり死後に神格化され世間を賑わす
+本当にタイムリープしていたのかたまたま嘘からでた真実か永遠に語られる",1200001,82068,NULL
+NULL,html-keyboard-response,6,1965976,0.0-6.0,4277165,structured,2025/8/8 11:36,2025/8/8 12:09,debrief,NULL,4358, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,11,0.0-0.0,2349425,structured,2025/8/8 11:32,2025/8/8 12:10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,328573,0.0-1.0,2349425,structured,2025/8/8 11:32,2025/8/8 12:10,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,584612,0.0-2.0,2349425,structured,2025/8/8 11:32,2025/8/8 12:10,structure_outline_inst_tl,Array,256038,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,1064618,0.0-3.0,2349425,structured,2025/8/8 11:32,2025/8/8 12:10,structure_outline_task,NULL,NULL,Array,なし,"朝起きたら性別が変わっていた
+家族や知り合いの性別も全て変わっていた
+それ以外でも様々な常識が反転しているようだった","反転した常識に慣れずにいろいろな失敗をしてしまう
+反転した常識の中に非人道的なルールがあり、命の危険を感じる
+周りからおかしいと疑われてしまい、孤立していく
+家族や友人から命を狙われてしまい逃げ出す","この世界に来てしまった原因を探り、鏡からこの世界に来てしまったことを思い出す
+この世界に来たときの鏡を探し出し、一か八か鏡に突っ込んでみる
+強い衝撃とともに鏡が割れてしまうが、自分の体が元の性別に戻っており、元の世界に戻ったと確信する",NULL,NULL,NULL,NULL
+NULL,instructions,4,1126071,0.0-4.0,2349425,structured,2025/8/8 11:32,2025/8/8 12:10,main_task_inst_tl,Array,61452,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,2326073,0.0-5.0,2349425,structured,2025/8/8 11:32,2025/8/8 12:10,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"Aは都内の学校に通う男子高生だ。
+ある朝、Aは鏡を見た自分の姿に驚いた。
+なんと自分の姿が女性になっていた。
+驚きつつも部屋から出て家族の様子を確認すると、家族の性別も変わっていた。
+家族はAの姿を見ても驚きもせず、当たり前のように接してきた。
+Aは動揺しつつも、いつもどおりの生活をしておこうと思い、学校へ向かった。
+学校でもクラスメイトの性別は変転しており、誰もおかしいと感じていないようだった。
+友人たちと話していると、性格は変わっていないようだが、なにか話が噛み合わない部分やおかしい事があった。
+たとえば授業中、みんな立って授業を受けていたり、教科書を逆さに持っていたりと、奇妙だった。
+そんな常識を知らないAはたびたび失敗してしまい、同級生や先生から笑われてしまった。
+しかし、その後に起こったことは笑い事では済まなかった。
+やっと授業が全て終わり帰れると思ったが、先生から話があると呼び止められた。
+何かと聞くと、先生から選ばれたよと言われた。
+どういうことかと聞くと、周りのクラスメイトから羨ましい、良かったね、という声が上がった。
+どうやら毎月、臓器移植のドナーに一人の生徒が選ばれるという常識があるということらしい。
+Aは恐ろしくなって逃げ出そうとするが、周囲の人はそれを理解できなかったようだった。
+家に逃げ帰ると、今度は家族がおめでとうといって、捕まえようとしてきた。
+Aはこんな世界が嫌になり、元の世界に戻る方法を探そうとした。
+ぼんやりと寝る前のことを思い出し、バスルームの鏡に頭をぶつけたことを思い出す。
+もしやと思い、バスルームへ駆け込み、鏡を確認すると鏡の向こうに元の性別の自分がいることに気づく。
+家族がバスルームの扉を叩くなかで、一か八か鏡に突っ込んでみる。
+すると大きな音と光の中で気を失っていまう。
+起きてみるとバスルームの中で、鏡を見ると女性の自分が写っていた。
+鏡を殴って割り、二度と向こうの世界に",1200001,9783,NULL
+NULL,html-keyboard-response,6,2330149,0.0-6.0,2349425,structured,2025/8/8 11:32,2025/8/8 12:10,debrief,NULL,4074, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,26,0.0-0.0,1069349,structured,2025/8/8 11:36,2025/8/8 12:12,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,4136,0.0-1.0,1069349,structured,2025/8/8 11:36,2025/8/8 12:12,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,344291,0.0-2.0,1069349,structured,2025/8/8 11:36,2025/8/8 12:12,structure_outline_inst_tl,Array,340154,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,824324,0.0-3.0,1069349,structured,2025/8/8 11:36,2025/8/8 12:12,structure_outline_task,NULL,NULL,Array,ザコール,"主人公の少女はある日十数年前から送られてきた不思議なメールを受け取る。
+そのメールに返信したことにより、十数年前の人物と交流を持ち始める。","メールでの交流をえて、交流相手が誰か少女は気づいてしまう。
+その人物は震災の時に英雄的な行動をとり、多くの人を救った人だった。
+ただその行動により彼は命を落としていた。
+彼を救いたいが、彼の行動をゆがめればその行動で救われた多くの人が失われるかもしれないというジレンマに悩む少女。","答えは出ず、彼に全てを伝える少女。
+そして自分の行動を変えず、それを全うしたメールの相手。
+メールの返信が返ってこなくなった彼女の元に、彼からの最後の手紙が来た。",NULL,NULL,NULL,NULL
+NULL,instructions,4,936807,0.0-4.0,1069349,structured,2025/8/8 11:36,2025/8/8 12:12,main_task_inst_tl,Array,112482,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,2136817,0.0-5.0,1069349,structured,2025/8/8 11:36,2025/8/8 12:12,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"「ココ」という宛先から私のスマホにメールが来た。
+バグっているのか、メールの時間設定がおかしい。
+少し怖いが、好奇心に勝てずメールを開くことにした。
+「父さん、8月のお盆に実家に帰ります。心配しなくてもこちらは大丈夫。大学でも上手くやっています。」
+さすがにこのメールをそのままスルーするのはよくないと考え、私は送信相手に間違っているというメールを送ることにしました。
+メール送信後、送信相手からお礼のメールが送られてきて、そこには感謝でいっぱいの言葉。
+大げさすぎると思ったので、つい返信していまい、それからこの時間設定のおかしい不思議なメール相手と交流が始まりました。
+彼の話はとても面白く、私にとって彼の存在は段々と大きなものに。
+けれども私の名前を言うこともなく、彼の名前もきょうみはあったけど、聞くことはありませんでした。
+でもある日の彼の話で、私は彼が誰か知ってしまったのです。
+その話はメディアで何度も取り上げられている人物の感動話。
+大震災の際に、多くの人を救った英雄みたいな人。
+ただそのときは私は気づいてしまいました、メールの彼の今後に。
+その英雄みたいな人は震災の行動によって多くの人を救った代わりに命を落とすことになるのです。
+私は彼にそのことを伝えるかどうか悩みました。
+彼が行動を止めれば彼の命は助かるかもしれない。
+でも彼が行動を止めることで救われる多くの人が救われないかもしれない。
+結局答えは出ず、でも彼に生きてもらいたく、私はありのままのことを彼に伝えました。
+それからもメールは続きましたが、ある日メールがピタリと止まりました。
+歴史は変わらず、彼は私",1200008,4024,NULL
+NULL,html-keyboard-response,6,2142195,0.0-6.0,1069349,structured,2025/8/8 11:36,2025/8/8 12:12,debrief,NULL,5376, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,7,0.0-0.0,114735,structured,2025/8/8 11:39,2025/8/8 12:13,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,4805,0.0-1.0,114735,structured,2025/8/8 11:39,2025/8/8 12:13,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,262157,0.0-2.0,114735,structured,2025/8/8 11:39,2025/8/8 12:13,structure_outline_inst_tl,Array,257351,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,742159,0.0-3.0,114735,structured,2025/8/8 11:39,2025/8/8 12:13,structure_outline_task,NULL,NULL,Array,なし,"・あるアメリカの西海岸の街はテロリスト国家の細菌兵器により死の街と化していた。
+・その街だけでなくアメリカ全土が荒廃していた
+・新入りの二等兵クリスは大統領に命じられ、街を完全に浄化する装置をテキサスまで取りに行くように命じられる","・旅の道中、テロリストに命を狙われるクリス
+・装甲車に装備されたマシンガンの弾薬が残り少ない
+・食料も少ない
+・戦闘で次々に仲間が亡くなる","・テキサスに行って軍司令より浄化装置を手に入れ、見事、街に戻ってきたクリス
+・すぐに装置を作動させ、街を浄化することに成功した
+・この事件はアメリカが再興する大きなきっかけになった",NULL,NULL,NULL,NULL
+NULL,instructions,4,815182,0.0-4.0,114735,structured,2025/8/8 11:39,2025/8/8 12:13,main_task_inst_tl,Array,73023,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,2015184,0.0-5.0,114735,structured,2025/8/8 11:39,2025/8/8 12:13,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"アメリカ軍に入隊したばかりの二等兵クリス。ある日、彼は重要な任務をアメリカ大統領から命じられることになる。どうして二等兵の彼に重要な任務を与えられたのか。それは実は彼がアメリカ軍が密かに開発したサイボーグだったらである。見た目は人と変わらないが全身は金属や強化プラスチック、人工皮膚で構成されており、人とは全く違っている。超人的な能力を有しているが、二等兵を装って陸軍に入隊していた。
+
+彼に命じられた重大な任務はアメリカの荒廃した土地をクリーンにすることである。現在のアメリカはテロリストがばら撒いた細菌兵器によって汚染されており、人はガスマスクなしでは1分も生きられない。クリスは西海岸の街からテキサスまで移動し、空気を浄化する特殊な装置を持って帰還しなければならない。人にはできない任務であり、サイボーグの彼がそれを行うことを大統領から命じられた。
+
+彼に与えられた装備はいくつかの銃と小さな装甲車だった。相棒はおらず、道中にあるシェルターで弾薬や食料などを補充しながら移動し、各所で同じサイボーグの仲間と共同で作業をすることになる。
+
+出発初日は順調に進んだが、2日目は敵対するテロリスト集団に襲撃された。クリスは装甲車に装備されたマシンガンで応戦し、なんとか生き残ることができた。尚、テロリスト集団は人を使って攻撃を仕掛けているが、彼らもまたこの戦争における被害者でもあった。中東で奴隷として扱われている民族をそのまま兵士として投入しているのである。彼らは汚染された空気を吸い込み、次々と亡くなっていった。テロリストの首謀者は彼らのことをカミカゼと呼び、",1200001,23144,NULL
+NULL,html-keyboard-response,6,2018440,0.0-6.0,114735,structured,2025/8/8 11:39,2025/8/8 12:13,debrief,NULL,3256, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,5,0.0-0.0,4021758,structured,2025/8/8 12:38,2025/8/8 12:57,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,4198,0.0-1.0,4021758,structured,2025/8/8 12:38,2025/8/8 12:57,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,103426,0.0-2.0,4021758,structured,2025/8/8 12:38,2025/8/8 12:57,structure_outline_inst_tl,Array,99225,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,583428,0.0-3.0,4021758,structured,2025/8/8 12:38,2025/8/8 12:57,structure_outline_task,NULL,NULL,Array,なし,世紀末の荒れた世界に主人公の父親とその娘の生きる話である,"世紀末ではあらゆる人たちが物資を奪い合い力が支配する世界、そんな中、主人公の父親とその娘が物騒な輩の標的になり、娘が命を落とす、そして復讐を誓う父。
+父親と輩の戦いが始まる。",父親は暴力的な輩を成敗し、亡き娘の復讐を終え平和な世界を願った。,NULL,NULL,NULL,NULL
+NULL,instructions,4,634993,0.0-4.0,4021758,structured,2025/8/8 12:38,2025/8/8 12:57,main_task_inst_tl,Array,51564,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,1123520,0.0-5.0,4021758,structured,2025/8/8 12:38,2025/8/8 12:57,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"世紀末の荒れた世界に主人公の父親と幼き娘との旅である。
+この世界ではあらゆる暴力が横行しており力が支配する。そんな中、父親と娘が暴力的な輩たちの標的となり、争いの中で娘が命を落とす。父親は嘆き、復讐を誓う。
+父親は負傷しながらも一人ひとり、輩たちを倒し全員を成敗する。復讐を終え娘を亡くした心の深い傷をおいながら再び終わりの見えない旅に出る。",488526,11543,NULL
+NULL,html-keyboard-response,6,1126381,0.0-6.0,4021758,structured,2025/8/8 12:38,2025/8/8 12:57,debrief,NULL,2859, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,7,0.0-0.0,3824660,structured,2025/8/8 12:33,2025/8/8 12:57,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,10587,0.0-1.0,3824660,structured,2025/8/8 12:33,2025/8/8 12:57,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,134568,0.0-2.0,3824660,structured,2025/8/8 12:33,2025/8/8 12:57,structure_outline_inst_tl,Array,123981,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,614574,0.0-3.0,3824660,structured,2025/8/8 12:33,2025/8/8 12:57,structure_outline_task,NULL,NULL,Array,君の名は,"ある田舎町で学校生活を送っている主人公が居た。
+田舎から出たかった主人公は都会への夢を抱いて、親の反対を押し切り突然電車に乗り込んで都会を目指した。
+都会へ着いた主人公はある一人の女性と遭遇した","女性はとても不思議なことを言い、あなたと私は同一人物だと言った。
+主人公は女性の言っていることがわからず都会の魅力を感じつつ、自分が田舎育ちということを痛感することになる。
+周りの人々は親身になって聞いてくれる人はおらず、女性だけが自分のことを見てくれているとわかった","都会の雰囲気から徐々に慣れていき、主人公は都会に染まろうと努力した。
+ある時女性が目の前に現れ、私も同じ境遇を体験したという。主人公は昔の自分と同じだと知ることができた。
+女性と共に都会を楽しむことにｓ",NULL,NULL,NULL,NULL
+NULL,instructions,4,667141,0.0-4.0,3824660,structured,2025/8/8 12:33,2025/8/8 12:57,main_task_inst_tl,Array,52565,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,1459470,0.0-5.0,3824660,structured,2025/8/8 12:33,2025/8/8 12:57,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"田舎町で高校まで過ごしていた主人公は都会へのあこがれを抱き、都会へ行こうと決心した。
+親の反対を押し切り電車に乗った主人公は徐々に近づく都会の景色に胸がどきどきした。
+田舎にはない魅力がそこにはあり、ただ周りの人々は私のことを見向きもしなかった。そこにある女性が私に声をかけた。
+「あなたと同一人物だ」と突然話しかけてくる女性に主人公は不思議に感じた。その時主人公は女性の言葉の意味を理解できなかった。
+都会の魅力を感じつつ田舎にはない魅力を堪能していた主人公はある一つの苦難に差し掛かる。
+田舎町では困った人には声をかける習慣があるが、都会にはそれがないことを知った。主人公は何処へ行くにも話を聞くことができず、独りぼっちだということだけが残ってしまった。
+そこにあの時の女性が現れて、同じことをまた話した。
+そこで初めて主人公は女性が自分の過去の姿なのだと知ることになる。
+主人公は自分の気持ちだけで都会に出てきたが都会のことを全く知らず、自分勝手な行動を取ったと反省をした。
+女性に「あなたは私自身ですか？」と尋ね、女性が頷くと都会で初めての知り合いに出会うことに安堵した。
+主人公は過去の私が未来を変えてくれたのだと思い、女性に不安を感じながら名前を聞いた。
+女性は「○○」だと。私と同じ名前だった。偶然かもしれないが私と同姓だというだけでも安心した気持ちを得ることができた。
+それから女性に出会うことは無かったが、突発的に都会へ出てしまった自分の行動を悔いたが過去の自分へ感謝し、同じように悩んでいる人々へ手を差し伸べる主人公であった。",792328,6907,NULL
+NULL,html-keyboard-response,6,1465448,0.0-6.0,3824660,structured,2025/8/8 12:33,2025/8/8 12:57,debrief,NULL,5977, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,14,0.0-0.0,4189255,structured,2025/8/8 12:45,2025/8/8 13:03,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,2718,0.0-1.0,4189255,structured,2025/8/8 12:45,2025/8/8 13:03,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,24535,0.0-2.0,4189255,structured,2025/8/8 12:45,2025/8/8 13:03,structure_outline_inst_tl,Array,21816,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,504538,0.0-3.0,4189255,structured,2025/8/8 12:45,2025/8/8 13:03,structure_outline_task,NULL,NULL,Array,なし,人々はAIに生活を委ねている,主人公はAIに支配された今の社会に疑問を抱く,AIの中枢を変更し、選択できる自由を人々に与えるよう改変した,NULL,NULL,NULL,NULL
+NULL,instructions,4,539167,0.0-4.0,4189255,structured,2025/8/8 12:45,2025/8/8 13:03,main_task_inst_tl,Array,34629,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,1073047,0.0-5.0,4189255,structured,2025/8/8 12:45,2025/8/8 13:03,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"AIは完璧な存在である
+AIの回答は常に早く正確で的確だから人間はAIにたよりきっている
+一人の人間がその存在に疑問を抱いた
+人間はAIの支配されておりそこに自由は無いのではないか
+主人公はAIを改変し自由を手に入れる決意をした",533879,70595,NULL
+NULL,html-keyboard-response,6,1079231,0.0-6.0,4189255,structured,2025/8/8 12:45,2025/8/8 13:03,debrief,NULL,6184, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,6,0.0-0.0,4517104,structured,2025/8/8 12:33,2025/8/8 13:05,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,3945,0.0-1.0,4517104,structured,2025/8/8 12:33,2025/8/8 13:05,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,138345,0.0-2.0,4517104,structured,2025/8/8 12:33,2025/8/8 13:05,structure_outline_inst_tl,Array,134398,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,618353,0.0-3.0,4517104,structured,2025/8/8 12:33,2025/8/8 13:05,structure_outline_task,NULL,NULL,Array,泣いた赤鬼,"ある村の近くにイノシシ２匹が住んでいた。それをイノシシA、イノシシBとする。
+村では農作物を荒らすものとして猪を嫌っていた。しかしイノシシAはその村に住む人間と仲良くなりたいと考えている。",しかし何の策もなしに村に近づいてもイノシシは追い払われるばかり。そこでイノシシBがわざと農作物を嵐に行くとAに提案する。そこにイノシシAが現れ、私（イノシシB）を追い払うようにすればいいと提案した。,農作物を荒らすイノシシを追い払ったイノシシAは村人たちから感謝され村人たちに受け入れられた,NULL,NULL,NULL,NULL
+NULL,instructions,4,676477,0.0-4.0,4517104,structured,2025/8/8 12:33,2025/8/8 13:05,main_task_inst_tl,Array,58122,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,1877452,0.0-5.0,4517104,structured,2025/8/8 12:33,2025/8/8 13:05,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"とある村の話。その村では農作が盛んで様々な野菜や果物を作っている。
+自然豊かな村であり近くには動物たちも多く住んでいる。
+村人は農作物を荒らす猪を当然ながら嫌い、対策に躍起になっている。
+
+そんな村の近くで暮らす猪たちの中にイノシシAとイノシシBがいた。
+彼らはもうこれ以上人間との争いを続けるのは不毛であり、共存したいと考えている。
+
+彼らはどうしたら人間と良好な関係を築けるのかと色々と知恵を絞ったが良い案は浮かばない。
+痺れを切らしたイノシシB、苦渋の決断として自らを悪者と仕立て上げ、イノシシAがそこに介入することでお前だけでも人間に近づくことができれば良いと考えた。
+
+しかしイノシシAはその提案に反対した。仲間に犠牲になってほしくないからだ。
+
+イノシシBはAを諭す。受け入れられるのは最初はお前だけかもしれないが時間が経てばイノシシ全体のイメージも変わっていくだろうと。そのような未来があるならば自分一人の犠牲など大したことではない。
+
+他に良い作戦を思い浮かばないAは泣く泣くその提案を受け入れるしかなかった。
+
+
+
+実行の日。作戦通り農作物を派手に荒らすイノシシB。そこへイノシシAは現れる。
+
+
+
+たわわに実った農作物をともに荒らし大量の野菜や果物を奪い",1200972,4911,NULL
+NULL,html-keyboard-response,6,1880256,0.0-6.0,4517104,structured,2025/8/8 12:33,2025/8/8 13:05,debrief,NULL,2803, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,5,0.0-0.0,4683976,structured,2025/8/8 12:35,2025/8/8 13:08,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,5239,0.0-1.0,4683976,structured,2025/8/8 12:35,2025/8/8 13:08,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,232598,0.0-2.0,4683976,structured,2025/8/8 12:35,2025/8/8 13:08,structure_outline_inst_tl,Array,227358,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,712605,0.0-3.0,4683976,structured,2025/8/8 12:35,2025/8/8 13:08,structure_outline_task,NULL,NULL,Array,耳をすませば,"・学校で仲良くなった二人の女子高生(りか、さくら)
+・将来について漠然と考える
+","・りかはやりたいことがなく、将来の道に悩み焦る
+・さくらは看護師の夢を持ち、そのために着実に進み始める
+・りかはそんなさくらがうらやましく、焦りから次第にすれ違い始める","・りかが慕う顧問の先生からのアドバイス、両親からのアドバイスに励まされる
+・自分がやりたいことを焦らず見つけていこうと気持ちを切り替える
+・ギクシャクしていたさくらとの関係も修復できて、良い親友として支えあう",NULL,NULL,NULL,NULL
+NULL,instructions,4,749645,0.0-4.0,4683976,structured,2025/8/8 12:35,2025/8/8 13:08,main_task_inst_tl,Array,37034,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,1949652,0.0-5.0,4683976,structured,2025/8/8 12:35,2025/8/8 13:08,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"都内の公立学校に通う安藤りか。
+同じクラスの山田さくらと席が隣になり、仲の良い友達になる。
+学校に進路希望の提出をしないといけないが、りかはまだ自分が将来何をしたいのか決められず、なかなか用紙を提出できない。
+さくらに相談すると、「私はもう提出したよ！子供の頃から看護師になるのが夢なんだ！」
+と、楽しそうに答える。
+てっきりりかは自分と同じで将来について決まっていないと思っていたさくらが、こんなにもういろんなことを考えていたことにビックリし、同時に焦りを感じる。
+さくらはその後も自分の進路のために勉強を頑張り、それを見ているりかは次第にさくらに置いて行かれている気分になってしまい、次第にさくらと一緒に過ごすのが辛くなっていってしまう。
+さくらも、りかの様子が以前と違うことに気づいていたため、お互い距離を取るようになっていった。
+そんな状況を顧問の先生が気づき、りかに声をかける。
+りかは、今の自分の気持ち、さくらに対する気持ちを正直に話した。
+先生は、「焦らなくていい。お前はお前の思うように進めばいいんだ。時間はまだまだたくさんある。」と、励ましてくれ、りかも少し気持ちが軽くなる。
+その日の夜、両親に進路のことを相談するりか。
+すると、「父さんも同じ気持ちになったことがある」と、学生時代の話をする父。
+父も、仲の良かった友達が、将来に向かってどんどん進んでいくのを見ながら、自分と比べて焦っていたとか。
+「でも、自分は自分だって思ったら、気がラクになったよ。その後、ちゃんと自分のやりたいことも見つけられた。時間はかかったけど、父さんは今ちゃんと大好きな仕事ができて幸せだ。」
+その話を聞いて、りかは自分も焦らず見つけていけばいいんだと思えるようになる。
+翌日、さくらにこれまでの気持ちや今どう思っているのかを正直に話し、謝罪した。
+さくらとの関係も修復し、それ以降、りかは進路についてさくらに相談しながら二人で",1200006,8338,NULL
+NULL,html-keyboard-response,6,1956871,0.0-6.0,4683976,structured,2025/8/8 12:35,2025/8/8 13:08,debrief,NULL,7217, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,5,0.0-0.0,2810580,structured,2025/8/8 12:35,2025/8/8 13:09,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,3877,0.0-1.0,2810580,structured,2025/8/8 12:35,2025/8/8 13:09,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,184601,0.0-2.0,2810580,structured,2025/8/8 12:35,2025/8/8 13:09,structure_outline_inst_tl,Array,180724,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,664607,0.0-3.0,2810580,structured,2025/8/8 12:35,2025/8/8 13:09,structure_outline_task,NULL,NULL,Array,名探偵コナン,組織に歳を取ってしまう薬を無理やり飲まされて、おじいさんになってしまった青年が組織を壊滅する為に立ち向かう物語,老人ホームに通いながら組織の秘密を探り対決していくが、年老いた身体の為、身体のあちこちが痛くて歩くのもしんどい状態、リハビリや歩行訓練をしながら組織と闘う体力をつける,付き添いのヘルパーさんの力やハイテク機器の使用により組織に対抗していき、ついに組織を壊滅することに成功する,NULL,NULL,NULL,NULL
+NULL,instructions,4,856184,0.0-4.0,2810580,structured,2025/8/8 12:35,2025/8/8 13:09,main_task_inst_tl,Array,191574,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,2056188,0.0-5.0,2810580,structured,2025/8/8 12:35,2025/8/8 13:09,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"白の組織により歳を取ってしまう薬を無理やり飲まされて、おじいちゃんの身体になってしまった。復復讐に燃える主人公は組織を壊滅する為に立ち向かうのであった。家族を頼ることなく一人で戦いを挑むために、まずは家を探さないといけない、しかし不動産に行くが、なかなか良い物件が見つからないので、老人ホームに入寮しようと決心する。老人ホームでは気の合う仲間に恵まれ楽しいひと時を過ごす、老人ホームに入寮して3か月後、ある一人の老人が老人ホームにやってきて、その老人も組織の薬によって年老いた身体になってしまった被害者だと知る。主人公はその老人と協力して組織に立ち向かおうと決心する。その老人から白の組織の情報を詳しく聞き出して組織に対抗する作戦を考えるが、まずは自分の身体を戦える状態に仕上げることが先決だと考えた。老人ホームのレクリエーションなどでリハビリに励みながら遂に組織と闘う身体が出来上がった。組織がある本社の居場所を突き止め、ヘルパーさんに道具の発注
+
+",1200002,6354,NULL
+NULL,html-keyboard-response,6,2060256,0.0-6.0,2810580,structured,2025/8/8 12:35,2025/8/8 13:09,debrief,NULL,4064, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,19,0.0-0.0,5090304,structured,2025/8/8 12:36,2025/8/8 13:10,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,13920,0.0-1.0,5090304,structured,2025/8/8 12:36,2025/8/8 13:10,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,320495,0.0-2.0,5090304,structured,2025/8/8 12:36,2025/8/8 13:10,structure_outline_inst_tl,Array,306574,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,800499,0.0-3.0,5090304,structured,2025/8/8 12:36,2025/8/8 13:10,structure_outline_task,NULL,NULL,Array,なし,"都会から田舎の学校に転校してきたユウタ
+勉強熱心なユウタをクラスメイトは次第に疎ましく思うようになる","ユウタはクラスメイトのヒロトから執拗ないじめを受ける
+心配したユウタの親によって別の学校へ転校することになる","時が経って裁判官となったユウタの目の前には被告人としてヒロトが立っていた
+公平な判決を下すことに努めたユウタが、公判の最後にヒロトに人間としての正義を説く",NULL,NULL,NULL,NULL
+NULL,instructions,4,868579,0.0-4.0,5090304,structured,2025/8/8 12:36,2025/8/8 13:10,main_task_inst_tl,Array,68076,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,2068582,0.0-5.0,5090304,structured,2025/8/8 12:36,2025/8/8 13:10,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"東京から緑豊かな田畑の広がる田舎に引っ越してきたユウタは、転校初日をむかえた。
+ユウタが緊張の面持ちで自己紹介を終えて席に着くと、隣の席のヒロトがこちらをチラチラと見ていた。ユウタは友達を作るのは苦手だったが、学校の勉強が好きだった。休み時間もノートを開いて前の授業の復習をした。そんなユウタをヒロトはからかい、次第にノートを隠したり破ったりするようないじめが始まった。いじめはどんどんエスカレートして、暴力をふるわれるようになったユウタは見るからに憔悴し、心配した両親によって再び転校することとなった。
+転校先ではいじめがなくなり、好きな勉強をコツコツ続けた結果、ユウタは裁判官となることが出来た。初めての公判の日、目の前に立っていたのは暴力事件の被告人となったヒロトだった。ユウタは冷静に事実確認をして判決を下すと、ヒロトに自分を見つめ直すように説くのだった。",1200001,6187,NULL
+NULL,html-keyboard-response,6,2072767,0.0-6.0,5090304,structured,2025/8/8 12:36,2025/8/8 13:10,debrief,NULL,4181, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,23,0.0-0.0,804422,structured,2025/8/8 12:35,2025/8/8 13:15,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,5542,0.0-1.0,804422,structured,2025/8/8 12:35,2025/8/8 13:15,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,594445,0.0-2.0,804422,structured,2025/8/8 12:35,2025/8/8 13:15,structure_outline_inst_tl,Array,588902,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,1074453,0.0-3.0,804422,structured,2025/8/8 12:35,2025/8/8 13:15,structure_outline_task,NULL,NULL,Array,バック・トゥ・ザ・フューチャー,"・平凡な日常に飽きている
+・変わった博士と出会いタイムマシーンと出会う","・タイムマシーンを使い、過去を変えて、現在の自分を良くしようとする
+・過去を変えて、現在が良くなるが、何か満足できなずに悩む","・自分のためではなく、他人のために何かをすることに喜びを感じることに気づく。
+・他人のために何かをしようと決意して、終わる。",NULL,NULL,NULL,NULL
+NULL,instructions,4,1181590,0.0-4.0,804422,structured,2025/8/8 12:35,2025/8/8 13:15,main_task_inst_tl,Array,107135,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,2381594,0.0-5.0,804422,structured,2025/8/8 12:35,2025/8/8 13:15,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"太郎は、大学を卒業して、就職して、結婚して子どももおり、幸せな毎日を送っていたが、なぜか満足できなかった。
+ある日、近所に変わった博士がいると噂があり、その博士の自宅に行くと、タイムマシーンの乗り物を見せてもらった。
+太郎は、これを使って、過去に行けば、満足できる現在になるのではないかと思い、博士に頼み過去に行くことを何度か繰り返した。
+タイムマシーンで過去に戻って、競馬の大穴を当て、大金持ちになった。他にも色々過去を変えて、昔の自分よりも満足できる自分になった。
+何もかも手に入れて幸せだったが、何故か満足できない。
+ある日、道を歩いてる女性が、、ハンカチを落として拾ってあげて、お礼を言われたが、何か今までにない喜びを感じた。そして、自分のことばかりを考えていたことに気づかされ、他者に対して、何かをすることの大切さに気付かされた。
+そして、何か他者のためにしようと決意し、前向きに生きていける感じがした。",1200001,9859,NULL
+NULL,html-keyboard-response,6,2384271,0.0-6.0,804422,structured,2025/8/8 12:35,2025/8/8 13:15,debrief,NULL,2676, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>
+1,preload,0,119,0.0-0.0,5208842,structured,2025/8/8 13:42,2025/8/8 14:14,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+1,fullscreen,1,4201,0.0-1.0,5208842,structured,2025/8/8 13:42,2025/8/8 14:14,FullScreen,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,instructions,2,167906,0.0-2.0,5208842,structured,2025/8/8 13:42,2025/8/8 14:14,structure_outline_inst_tl,Array,163703,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,survey-html-form,3,647914,0.0-3.0,5208842,structured,2025/8/8 13:42,2025/8/8 14:14,structure_outline_task,NULL,NULL,Array,,"高校生の美咲は、ある日、理科室の掃除をしているとミントの香りがしてきたのでそのそばに行くと、突然気を失って倒れてしました。
+美咲が、気が付いたとき、保健室のベッドに寝かされていて、横には、同じクラスの横田君がいました。",横田君は、不思議な人でした。美咲は、そんな横田君が、とても気になっていました。ある日、理科室にいる横田君を見かけた美咲は、また、ミントの香りがするのを感じました。そして、また、気を失ったのですが、目覚めると,,NULL,NULL,NULL,NULL
+NULL,instructions,4,714273,0.0-4.0,5208842,structured,2025/8/8 13:42,2025/8/8 14:14,main_task_inst_tl,Array,66356,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL
+NULL,html-keyboard-response,5,1914279,0.0-5.0,5208842,structured,2025/8/8 13:42,2025/8/8 14:14,writing_block,NULL,NULL,NULL,NULL,NULL,NULL,NULL,"高校生の美咲は、ある日、理科室の掃除をしていると、ミントの香りがしてきたので、そばに行くと、突然気を失って倒れました。
+美咲が、気付いたとき、側には、同じクラスの横田君がいました。
+横田君は、不思議な人でした。美咲は、横田君がとても気になっていました。
+ある日、横田君の家に遊びに行くことになった美咲は、そこで、また、ミントの香りを嗅ぐことになりました。そして、美咲が気が付いたとき、ちょうど、一週間前の日に戻っていました。美咲は、初めは、気づいていませんでしたが、妹の一言で、一週間前に戻っている事に気付いたのです。きっと、あのミントの香りに何かあるのではないかと思った美咲は、横田君にミントの話をして見ました。その話を聞いた、横田君は、怪訝な顔をして、美咲に真実を話してくれました。自分は、未来から来た人間で、この時代にしかない、植物を探しに来たこと、そして、もうすぐ、未来に帰ることを話してくれました。そして、美咲の記憶から、自分という存在を消し去ることを話しました。
+一週間後、横田君が未来に帰る日に、美咲と横田君は、学校の理科室に居ました。横田君は、美咲にミントの香りを嗅がせて、これで、さようならだね。と言いました。美咲は、ぜったにこのことを忘れないからと言いながら、気を失ってしまいました。
+それから、10年たった、ある日、美咲は大学の実験室に居ました。そこに、一人の男性が訪ねてきました。それは、まぎれもなく、横田君でした。しかし、美咲は、気づくことなく",1200002,11775,NULL
+NULL,html-keyboard-response,6,1919361,0.0-6.0,5208842,structured,2025/8/8 13:42,2025/8/8 14:14,debrief,NULL,5077, ,NULL,NULL,NULL,NULL,NULL,NULL,NULL,<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p><p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>

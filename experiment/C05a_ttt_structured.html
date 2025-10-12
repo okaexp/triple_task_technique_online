@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <script src="./jspsych.js"></script>
+    <script src="./plugins/plugin-preload.js"></script>
+    <script src="./plugins/plugin-survey-html-form.js"></script>
+    <script src="./plugins/plugin-html-keyboard-response.js"></script>
+    <script src="./plugins/plugin-html-button-response.js"></script>
+    <script src="./plugins/plugin-survey-text.js"></script>
+    <script src="./plugins/plugin-fullscreen.js"></script>
+    <script src="./plugins/plugin-survey-likert.js"></script>
+    <script src="./plugins/plugin-instructions.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="./css/jspsych.css" />
+  </head>
+  <body></body>
+  <script>
+/*
+　C05a_ttt_structured.html
+　- 認知科学の資料論文に公開するstructured outline条件の執筆課題
+*/
+
+let writing_start_time;
+let probe_timer;
+let submit_timer;
+let end_timer;
+let responses_log = [];
+let response_log_order = 0;//何個目のデータか一応控える
+let response_log_json_string;
+let outline_response = {};
+let beep_start_time = null;
+let response_time_for_beep;
+let beep_active = false;
+let trial_text = "";
+let ref_text = "";
+let intro_text = "";
+let challenge_text = "";
+let resolve_text = "";
+const beep_audio = new Audio('./stimulus/beep.mp3');
+
+//時間管理
+let writing_duration;
+let writing_duration_rt;
+let submit_button_time; // 1分後に提出ボタンを表示（本当は12分間）
+let trial_duration_outline; // 1分後にアウトライン終了（本当は8分間）
+let totalTime; //trial_duration_outline秒
+let probe_interval;//先に宣言しておく
+
+let isTaskMain = false;//taskの量をデバッグと本番の切り替え
+
+if (isTaskMain){//本番
+  writing_duration = 20 * 60 * 1000; // 20分
+  submit_button_time = 8 * 60 * 1000; // 8分後に提出ボタンを表示
+  trial_duration_outline = 8 * 60 * 1000; // 8分後にアウトライン終了
+  totalTime = trial_duration_outline / 1000; //trial_duration_outline秒
+
+  function reset_probe_interval(){
+    return Math.floor(Math.random() * (45 - 15 + 1) + 15) * 1000;//// 15〜45秒の一様分布 → 平均30秒
+  };
+} else {//デバッグ用
+  writing_duration = 0.5 * 60 * 1000; // 20分 -> 0.5分でデバッグ（7/29）
+  submit_button_time = 0.1 * 60 * 1000; // 0.5分後に提出ボタンを表示
+  trial_duration_outline = 0.1 * 60 * 1000; // 1分後にアウトライン終了
+  totalTime = trial_duration_outline / 1000; //trial_duration_outline秒
+
+  function reset_probe_interval(){
+    return Math.floor(Math.random() * (20 - 10 + 1) + 5) * 1000;//// 5〜15秒の一様分布 → 平均10秒
+  };
+}
+
+$(document).on('keydown', function(e){
+  if ((e.which || e.keyCode) == 9) {
+    return false;
+  }
+});
+
+//音声ファイルを事前に読み込んでおく
+const preload = {
+  type: jsPsychPreload,
+  audio: ['./stimulus/beep.mp3']
+};
+
+jsPsych = initJsPsych({
+  on_finish: () => {
+    //DBにデータを送りたい場合はこの部分にsaveDatatoMysql()のような関数を自作して入れる
+    //今回は実験終了後に、ダウンロードにcsv出力する
+    jsPsych.data.get().localSave("csv", "./C05a_ttt_structured.csv");
+  },
+});
+
+//実験開始時間の記録
+const ex_start_time = new Date();
+const ex_start_time_text = ex_start_time.getFullYear()+"/"+(ex_start_time.getMonth()+1)+"/"+ex_start_time.getDate()+ " "+ ex_start_time.getHours()+":"+("0" + ex_start_time.getMinutes()).slice(-2)+":"+("0" + ex_start_time.getSeconds()).slice(-2);
+jsPsych.data.addProperties({"StartTime":ex_start_time_text});//参加者情報に格納
+
+//実験画面を全画面表示にする
+//フルスクリーンで実験を始める
+const FullScreen = {
+    type: jsPsychFullscreen,
+    fullscreen_mode: true,
+    message:"これから実験を始めます。実験はフルスクリーンで行われます。<br>"+
+    "（フルスクリーン非対応ブラウザの場合を除く）<br>"+
+    "*なお、実験を途中でやめる場合は、Escキーを押すことでフルスクリーンを解除することができます。<br><br>"+
+    "「次へ」ボタンを押すと次に進みます。<br><br>",
+    button_label:"次へ",
+    delay_after:1000,
+    data: { task: 'FullScreen' },
+};
+
+//1. 教示文を呈示
+const structure_outline_inst = [
+  `
+    <p style="text-align: left">※これ以降の課題ではヘッドホンあるいは音が聞きやすいデバイスを装着して取り組んでください。</p>
+    <p style="text-align: left">※普段、パソコンを使って文字を入力する時のように、手をキーボードにおいて課題に取り組んでください。</p>
+    <p style="text-align: left"><b>※以降の課題において、生成AIの利用を禁じます。入力内容から生成AIを使用していることが確認された場合、謝金が支払われないことがあります。</b></p>
+    <p><br></p>
+    <p style="text-align: left">本研究における、あなたの現在の課題を太字で示しています。</p>
+    <ul style="text-align: left;">
+      <li style='color:gray'>あなた自身についての質問 (所要時間：5分程度)</li>
+      <li style='color:gray'>刺激に対する反応の速さの課題（所要時間: 5分程度）</li>
+      <li style='color:gray'>文章産出中の思考に関する課題（所要時間: 5分程度）</b></li>
+      <li><b>事前課題（所要時間: 10分程度）</b></li>
+      <li>文章産出課題（所要時間: 20分程度）</li>
+    </ul>
+  `,
+  `
+    <p style="text-align: left">これから、本番課題に取り組む前の事前課題を行っていただきます。</p>
+    <p style="text-align: left"><b>事前課題では、どのような物語を書くかに関する方針を考えていただきます。</b><br></p>
+    <p style="text-align: left">物語の方針として、<b>あなたには「導入→対立・試練→解決」というテンプレートに従って、箇条書きで物語を考えてもらいます。</b><br><br></p>
+    <p style="text-align: left">こうした物語は日本では多く見られます。次のページでいくつか例を示します。</p>
+  `,
+  `
+    <h2>「導入→対立・試練→解決」というテンプレートに従った物語の例</h2>
+    <ol>
+      <li style="text-align: left"><b>君の名は</b>: 登場人物の日常の入れ替わり(導入)→女主人公の死亡とそれを止める男主人公(試練)→事件の解決と2人の再会(解決)</li><br>
+      <li style="text-align: left"><b>シン・ゴジラ</b>: 怪獣の出現(導入)→政府の対応と自衛手段の模索(試練)→最終手段と反撃(解決)</li><br>
+      <li style="text-align: left"><b>進撃の巨人</b>: 巨人との戦い(導入)→巨人と主人公の正体(試練)→世界の変革の選択(解決)</li><br>
+      <li style="text-align: left"><b>タイタニック</b>: 主人公の出会い(導入)→愛の成就と災害(試練)→犠牲と回想(解決)</li><br>
+      <li style="text-align: left"><b>バック・トゥ・ザ・フューチャー</b>: 時間移動(導入)→両親の恋の成立の手助け、戻れない危機(試練)→帰還(解決)</li><br>
+      <li style="text-align: left"><b>ラ・ラ・ランド</b>: 夢と愛の両立を目指す(導入)→衝突とすれ違い(試練)→別れとそれぞれの成功(解決)</li>
+    <ol>
+  `,
+  `
+    <p style="text-align: left">次のスライドから、<b>「導入→対立・試練→解決」のテンプレートに基づいて面白い物語を書いていただきます</b></p>
+    <p style="text-align: left">ただ、<u>もしテンプレートのみを用いて物語を作成することが難しいと考えている人は、「テンプレートを当てはめる参考元の物語」を考えてください。</u><br><br></p>
+    <p style="text-align: left">たとえば、「君の名は」を参考元の物語とした場合、登場人物や情景を入れ替えて、<br>「2匹のネズミが入れ替わり(導入)」、「入れ替わった先の相手をみて外に出ることを試み(試練)」、そして「入れ替わったネズミが再開する(解決)」を考えることができると思います。</p>
+    <h4 style="text-align: left">例: ある田舎の納屋に住むネズミのチュウタは、外の世界を知らずに育った。<br>
+      夜ごと祖父に「外は危険だ」と言われ続け、納屋の外へ出る勇気が持てずにいた。<br>
+      ある晩、ひょんなことから都会の地下に住むネズミのミミと夢の中で入れ替わってしまう。<br>
+      ミミは人間の落とし物を器用に集め、仲間と協力して生き抜いていた。チュウタはその生活に驚きつつ、徐々に自分の弱さを痛感する。<br>
+      再び元に戻ったチュウタは、勇気を出して外の世界へと足を踏み出す。<br>
+      嵐やカラスに怯えながらも、納屋にはなかった広がる世界と新たな仲間に出会い、自分の力で食べ物を見つけられるようになる。<br>
+      そしてある日、偶然再会したミミと再び語り合う。チュウタはもう怯えるだけのネズミではなかった。
+    </h4>
+    <p><br><br></p>
+    <p style="text-align: left">以上のように、<b>「参考元の物語」がある場合にはその欄にそのタイトルを、ない場合には「参考元の物語」に「なし」と書いてください。</b></p>
+  `
+  ,
+  `
+    <p style="text-align: left"><b>課題は8分間で強制的に次に進みます。</b></p>
+    <p style="text-align: left">8分間の間に可能な限り良い物語の構想を、箇条書きで考えてください。<br><br></p>
+    <p style="text-align: left"><b>ただし、さきほど紹介したネズミのチュウ太の話は書かないでください。</b><br></p>
+    <p style="text-align: left">準備ができたら「次へ」を押して、課題を始めてください。
+  `
+];
+
+const structure_outline_inst_tl = {
+  type: jsPsychInstructions,
+  pages: structure_outline_inst,
+  show_clickable_nav: true,
+  button_label_previous: "前へ",
+  button_label_next: "次へ",
+  data: { task: 'structure_outline_inst_tl' },
+};
+
+//2. structure_outline_task
+const structure_outline_task = {
+  type: jsPsychSurveyHtmlForm,
+  preamble: `
+    <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+      <h3>「導入→対立・試練→解決」のテンプレートに基づいて、箇条書きで物語の構想を考えてください。<br>
+        参考元の物語がある場合はタイトルを、ない場合は「なし」と書いてください。</h3>
+      <div id="outline_timer" style="font-weight: bold; font-size: 1.2em;">あと08分:00秒</div>
+    </div>
+  `,
+  button_label: "次へ",
+  html: `
+    <div style="display: flex; flex-direction: column; gap: 20px;">
+      <label>参考元の物語:<br><textarea id="ref_area" name="ref" rows="1" cols="80" required style="resize:none; font-size: 1.05em;"></textarea></label>
+      <label>導入:<br><textarea id="intro_area" name="intro" rows="4" cols="80" placeholder="・アイデア1\n・アイデア2\n・アイデア3\n..."  required style="resize:none; font-size: 1.05em;"></textarea></label>
+      <label>対立・試練:<br><textarea id="challenge_area" name="challenge" rows="4" cols="80" placeholder="・アイデア1\n・アイデア2\n・アイデア3\n..." required style="resize:none; font-size: 1.05em;"></textarea></label>
+      <label>解決:<br><textarea id="resolve_area" name="resolve" rows="4" cols="80" placeholder="・アイデア1\n・アイデア2\n・アイデア3\n..." required style="resize:none; font-size: 1.05em;"></textarea></label>
+    </div>
+    <br>
+  `,
+  data: { task: 'structure_outline_task' },
+
+
+  on_load: function() {
+    //buttonの隠蔽
+    const btn = document.getElementById('jspsych-survey-html-form-next');
+    if (btn) btn.style.display = 'none';
+
+    //参考元でのエンターキーを無効
+    document.getElementById('ref_area').addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+      e.preventDefault();
+      }
+    });
+
+    document.querySelectorAll('textarea')[0].addEventListener('input', (e) => { ref_text = e.target.value; });
+    document.querySelectorAll('textarea')[1].addEventListener('input', (e) => { intro_text = e.target.value; });
+    document.querySelectorAll('textarea')[2].addEventListener('input', (e) => { challenge_text = e.target.value; });
+    document.querySelectorAll('textarea')[3].addEventListener('input', (e) => { resolve_text = e.target.value; });
+
+    // タイマー開始
+    const timerDiv = document.getElementById('outline_timer');
+    const intervalId = setInterval(() => {
+      totalTime--;
+      const minutes = String(Math.floor(totalTime / 60)).padStart(2, '0');
+      const seconds = String(totalTime % 60).padStart(2, '0');
+      timerDiv.textContent = `あと${minutes}分:${seconds}秒`;
+      if (totalTime <= 0) clearInterval(intervalId);
+    }, 1000);
+
+    // 60秒後に自動で次へ
+    setTimeout(() => {
+      // 入力内容をフォームから取得
+      const form = document.querySelector('#jspsych-survey-html-form');
+      const formData = new FormData(form);
+      const response = {};
+      formData.forEach((value, key) => {
+        response[key] = value;
+      });
+      jsPsych.finishTrial({ response });
+    }, trial_duration_outline);
+  },
+
+  //記載内容の記録
+  on_finish: function(data){
+    data.ref_text = ref_text;
+    data.intro_text = intro_text;
+    data.challenge_text = challenge_text;
+    data.resolve_text = resolve_text;
+  }
+};
+
+main_task_inst = [
+  `
+    <p style="text-align: left">※これ以降の課題ではヘッドホンあるいは音が聞きやすいデバイスを装着して取り組んでください。</p>
+    <p style="text-align: left">※普段、パソコンを使って文字を入力する時のように、手をキーボードにおいて課題に取り組んでください。</p>
+    <p style="text-align: left"><b>※以降の課題において、生成AIの利用を禁じます。入力内容から生成AIを使用していることが確認された場合、謝金が支払われないことがあります。</b></p>
+    <p><br></p>
+    <p style="text-align: left">本研究における、あなたの現在の課題を太字で示しています。</p>
+    <ul style="text-align: left;">
+      <li style='color:gray'>あなた自身についての質問 (所要時間：5分程度)</li>
+      <li style='color:gray'>刺激に対する反応の速さの課題（所要時間: 5分程度）</li>
+      <li style='color:gray'>文章産出中の思考に関する課題（所要時間: 5分程度）</b></li>
+      <li style='color:gray'>事前課題（所要時間: 10分程度）</li>
+      <li><b>文章産出課題（所要時間: 20分程度）</b></li>
+    </ul>
+  `,
+  `
+    <p style="text-align: left">次のスライドからは、<strong>あなたが考えたオリジナルの面白い物語を書いていただきます。</strong></p>
+    <p style="text-align: left">先ほど書いてもらったメモを画面の左半分に呈示しているので適宜参照しながら、
+      <br>あなたが考えた面白い物語を画面の右半分に呈示されているテキストボックスに入力してください。</p>
+    <p><br><p>
+    <p style="text-align: left"><b>注意: 先ほど書いてもらった文章はそのままでは提出されません。<br>
+      必ず、先ほど書いてもらったメモを参照しながら、右側のテキストボックスに面白い物語を書くようにしてください。</p>
+  `,
+  `
+    <p style="text-align: left">ただし、あなたは物語を書くことと並行して、<u>ビープ音が聞こえたら可能な限り素早くTabキーを押し、<br>
+      その時に考えていたことを「プラニング」「出力」「修正」そして「その他」で回答してもらう課題を行なってもらいます。</u></p>
+    <p style="text-align: left">選択肢は、ビープ音がなってTabキーを押すと<br>
+      画面右側のテキストボックスの真下に提示されるので、
+      ボタンを押すことで回答してください。<br>
+    <p style="text-align: left">つまり、あなたには<b><u>「文章を書く」「ビープ音がなったらTabキーを押す」「その時に考えていたことを選択肢で回答する」<br>
+      そしてまた文章を書く課題に取り組んでいただきます。</b></u></p>
+  `
+  ,
+  `
+    <p style="text-align: left"><b>課題は20分間で強制的に次に進みます。</b></p>
+    <p style="text-align: left">また、8分間が経過すると「この内容で提出」というボタンが画面右上に提示されますので、<br>
+      物語を描き終えた方はこのボタンを押して、次に進んでも構いません。</p>
+    <p><br><br></p>
+    <p style="text-align: left">課題の準備ができたら「次へ」ボタンを押して、本番に進んでください。</p>
+  `
+]
+
+const main_task_inst_tl = {
+  type: jsPsychInstructions,
+  pages: main_task_inst,
+  show_clickable_nav: true,
+  button_label_previous: "前へ",
+  button_label_next: "次へ",
+  data: { task: 'main_task_inst_tl' },
+};
+
+const writing_screen = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus: () => {
+    return `
+      <div style="display: flex; flex-direction: row; gap: 10px; height: 90vh; width: 90vw; padding: 0 5px; box-sizing: border-box;">
+        <!-- 左側：事前課題の回答内容 -->
+        <div style="width: 50%; border-right: 1px solid #ccc; padding: 10px; overflow-y: scroll;">          
+          <h4>先ほど書いてもらった文章</h4>
+          <label>参考元の物語:<br><textarea readonly style="user-select: none; pointer-events: none; width:100%; height:30px; resize: none; overflow-y:auto; font-size: 1.05em;">${ref_text}</textarea></label><br>
+          <label>導入:<br><textarea readonly style="user-select: none; pointer-events: none; width:100%; height:200px; resize: none; overflow-y:auto; font-size: 1.05em;">${intro_text}</textarea></label><br>
+          <label>対立・試練:<br><textarea readonly style="user-select: none; pointer-events: none; width:100%; height:200px; resize: none; overflow-y:auto; font-size: 1.05em;">${challenge_text}</textarea></label><br>
+          <label>解決:<br><textarea readonly style="user-select: none; pointer-events: none; width:100%; height:200px; resize: none; overflow-y:auto; font-size: 1.05em;">${resolve_text}</textarea></label>
+        </div>
+
+        <!-- 右側：回答エリア、タイマー、次へボタン -->
+        <div style="width: 50%; padding: 10px; display: flex; flex-direction: column; height: 100 %; box-sizing: border-box;">
+          <div style="display: flex; justify-content: space-between; align-items: center;">
+            <p id="writing_instruction">オリジナルの面白い物語を書いてください：</p>
+            <p id="countdown_timer" style="font-weight: bold;"></p>
+            <button id="submit_button" disabled>この内容で提出</button>
+          </div>
+
+          <textarea id="writing_area" style="flex-grow: 1; resize: none; width: 100%; height: 100%; font-size: 1.05em;"></textarea>
+          <div style="margin-top: 10px;">
+            <div id="probe_instruction" style="display:none;">
+              <p style="color: red; font-weight: bold;">ビープ音が鳴りました！Tabキーを押してください。</p>
+            </div>
+            <div id="response_buttons" style="display:none; margin-top:10px;">
+              <p>どの段階で中断したかを選んでください：</p>
+              <button class="resp" data-response="planning">プランニング</button>
+              <button class="resp" data-response="output">出力</button>
+              <button class="resp" data-response="revision">修正</button>
+              <button class="resp" data-response="other">その他</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  },
+  choices: "NO_KEYS",
+
+  on_load: () => {
+    //開始時間の記録
+    writing_start_time = Date.now();
+
+    //最初の文字入力の識別
+    let firstCharTime = null;
+    const submitButton = document.getElementById('submit_button');
+    
+    //文字入力が起こったらtrial_text
+    //最新のテキストはtrial_textで管理して、画面終了時に他の変数に渡す
+    let textarea = document.getElementById('writing_area');
+    textarea.addEventListener('input', () => {
+        //もし文字入力が最初だったら、その情報を保存する
+        if (!firstCharTime && textarea.value.trim().length > 0) {
+          firstCharTime = Date.now();
+        };
+      trial_text = textarea.value;
+    });
+
+    //ビープ音のコントロール
+    schedule_probe();
+    document.addEventListener('keydown', handleBeepKey);
+    document.querySelectorAll('.resp').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const response = e.target.getAttribute('data-response');
+
+        //response_logに結果を溜め込む
+        //追記(2025/8/3): probe_intervalも追加する
+        responses_log.push({
+          order: response_log_order,
+          time: Date.now() - writing_start_time,
+          probe_interval: probe_interval,
+          response: response,
+          response_time_for_beep: response_time_for_beep,
+          trial_text: trial_text,
+        });
+
+        //JSON文字列に変換する
+        //ref: https://x-tech.pasona.co.jp/media/detail.html?p=2410
+        response_log_json_string = JSON.stringify(responses_log);
+
+        //response_log_json_stringをコンソールに出力する
+        //必要ならここにSQLへの保存用のコードを書く
+        console.log(response_log_json_string);
+
+        //responses_logを空にして,orderを更新する
+        responses_log = [];
+        response_log_order += 1;
+
+        enableTextarea();
+        document.getElementById('response_buttons').style.display = 'none';
+        document.getElementById('writing_instruction').innerText = 'オリジナルの面白い物語を書いてください：';
+        beep_active = false;
+        schedule_probe();
+      });
+    });
+
+    //提出ボタンをsubmit_button_timeが過ぎたら使えるようにする
+    submit_timer = setTimeout(() => {
+      document.getElementById("submit_button").removeAttribute("disabled");
+    }, submit_button_time);
+
+    //countdown_timerの表示内容と動作
+    let timer_interval = setInterval(() => {
+      let elapsed = Date.now() - writing_start_time;
+      let remaining = writing_duration - elapsed;
+
+      if (remaining < 0) {
+        //2025/8/1追記
+        //時間切れで保存して終了
+        clearTimeout(submit_timer);
+        clearInterval(timer_interval);
+        clearTimeout(probe_timer);
+        writing_duration_rt = Date.now() - writing_start_time;
+        pre_writing_pause = firstCharTime ? firstCharTime - writing_start_time : null;
+        jsPsych.finishTrial();
+      }  
+      
+      let minutes = Math.floor(remaining / 60000);
+      let seconds = Math.floor((remaining % 60000) / 1000);
+
+      //もしタイマーがあればタイマーを更新
+      if (document.getElementById('countdown_timer')) {
+        document.getElementById('countdown_timer').textContent = `あと${minutes.toString().padStart(2, '0')}分:${seconds.toString().padStart(2, '0')}秒`;
+      }
+    }, 1000);
+
+    // 「この内容で提出」ボタンが押されたら実験終了
+    submitButton.addEventListener('click', () => {
+      clearTimeout(submit_timer);
+      clearInterval(timer_interval);
+      clearTimeout(probe_timer);
+      writing_duration_rt = Date.now() - writing_start_time;
+      pre_writing_pause = firstCharTime ? firstCharTime - writing_start_time : null;
+      jsPsych.finishTrial();
+    });
+  },
+
+  on_finish: function(data){
+    data.task = 'writing_block';
+    data.writing_txt = trial_text;
+    data.writing_duration_rt = writing_duration_rt;
+    data.pre_writing_pause = pre_writing_pause;
+  }
+};
+
+function schedule_probe() {
+  //probe_interval を毎回ランダムに再設定
+  probe_interval = reset_probe_interval();
+  
+  probe_timer = setTimeout(() => {  
+    beep_audio.play();
+    beep_start_time = Date.now();
+    beep_active = true;
+    disableTextarea();
+    document.getElementById('writing_instruction').innerText = 'ビープ音が鳴りました！Tabキーを押してください。';
+  }, probe_interval);
+}
+
+function handleBeepKey(e) {
+  if (e.code === 'Tab' && beep_active) {
+    response_time_for_beep = Date.now() - beep_start_time;
+    document.getElementById('probe_instruction').style.display = 'none';
+    document.getElementById('response_buttons').style.display = 'block';
+    beep_active = false;
+    e.preventDefault();
+  }
+}
+
+function disableTextarea() {
+  const ta = document.getElementById('writing_area');
+  if (ta) ta.setAttribute('disabled', 'true');
+}
+
+function enableTextarea() {
+  const ta = document.getElementById('writing_area');
+  if (ta) ta.removeAttribute('disabled');
+}
+
+const debrief = {
+  type: jsPsychHtmlKeyboardResponse,
+  stimulus:
+    "<p style='text-algin:left'>これで実験は終了です。お疲れ様でした。</p>" +
+    "<p style='text-algin:left'>スペースキーを押して、謝金の支払いに関わる最後の質問に移行してください。</p>",
+  choices: [' '],
+  data: { task: 'debrief' },
+  on_finish:function(data){
+    const ex_finish_time = new Date();
+    const ex_finish_time_text = ex_finish_time.getFullYear()+"/"+(ex_finish_time.getMonth()+1)+"/"+ex_finish_time.getDate()+ " "+ ex_finish_time.getHours()+":"+("0" + ex_finish_time.getMinutes()).slice(-2)+":"+("0" + ex_finish_time.getSeconds()).slice(-2);
+    jsPsych.data.addProperties({"EndTime":ex_finish_time_text});
+  }
+};
+
+jsPsych.run([
+  preload,
+  FullScreen,
+  structure_outline_inst_tl,
+  structure_outline_task,
+  main_task_inst_tl,
+  writing_screen,
+  debrief
+]);
+
+</script>
+</html>

@@ -1,0 +1,17 @@
+jspsych.css
+
+ただし、以下の文字列をcssに貼り付ける
+
+/* 
+jspsych.cssに以下を追記する
+文字列のトラックの禁止
+*/
+p,
+img,
+ul,
+ol {
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
