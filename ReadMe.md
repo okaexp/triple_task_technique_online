@@ -43,5 +43,8 @@
         - analysis_narrative_quality_by_condition.R (narrative_evaluation_data.csvから物語品質の条件ごとの比較を行う)
         - analysis_ttt.R (TTT全体の分析を行う)
 
+- document (その他投稿論文に関わる資料)
+    - TTT_EvaluationTask_Instruction_and_Practice.pdf (物語の評価課題の教示と練習試行の内容)
+
 ### Contact
 岡 隆之介 (oka.exp@gmail.com)
